@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1a16">
+  <meta name="description" content="Search the complete 33 industrial machinery catalogue of M/s. Pukhraj Hastimal & Co.">
+  <title>Catalogue Search | Pukhraj Hastimal & Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Pukhraj Hastimal & Co. Homepage">
+        <span class="brand-mark">PH</span>
+        <span class="brand-copy">
+          <strong>PUKHRAJ HASTIMAL & CO.</strong>
+          <small>Industrial Equipment · Solutions · Trust</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="products.html">Products (33)</a> <a href="categories.html">Categories</a> <a href="industries.html">Industries</a> <a href="downloads.html">Downloads</a> <a href="contact.html">Contact</a>
+        <a href="quote.html" class="nav-cta">Request a Quote <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subpage-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span class="current">Search Results</span>
+        </nav>
+        <h1 class="page-title">Machinery Catalogue <em>Search.</em></h1>
+        <p class="hero-subheading">
+          Search across all 33 industrial machines by equipment title, HSN code, engineering specifications, or application domain.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container">
+        
+        <!-- Live Search Input Box -->
+        <div style="max-width: 680px; margin: 0 auto 36px;">
+          <label class="search-box" style="width: 100%; border: 2px solid var(--forest-light); padding: 6px 16px; border-radius: var(--radius-sm); background: var(--white); box-shadow: var(--shadow-sm);">
+            <span class="search-icon" style="font-size: 20px; color: var(--forest);" aria-hidden="true">⌕</span>
+            <input id="liveSearchInput" type="search" placeholder="Type equipment name, model (e.g. BK90-8GH, Boiler, APFC), or HSN..." style="border: 0; outline: none; width: 100%; padding: 10px; font-size: 16px;">
+          </label>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 12px;">
+          <p id="searchCount" style="margin: 0; font-family: var(--font-heading); font-size: 18px; color: var(--forest-dark); font-weight: 700;">
+            Searching Catalogue...
+          </p>
+          <a href="products.html" class="cat-link">View Full Grid →</a>
+        </div>
+
+        <!-- Search Results Grid -->
+        <div class="equipment-grid" id="searchResultsGrid">
+          <!-- Dynamically filled -->
+        </div>
+
+        <!-- Zero Results Fallback -->
+        <div class="empty-state" id="zeroResults" hidden style="margin-top: 40px; padding: 60px 20px; text-align: center; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md);">
+          <div style="font-size: 40px; margin-bottom: 12px;">🔍</div>
+          <h3 style="font-family: var(--font-heading); color: var(--forest-dark); margin: 0 0 8px;">No matching industrial equipment found.</h3>
+          <p style="color: var(--muted); max-width: 500px; margin: 0 auto 20px;">
+            We couldn't find any equipment matching that term. Please check your spelling or search by general category such as 'boiler', 'transformer', 'pump', or 'compressor'.
+          </p>
+          <a href="products.html" class="nav-cta" style="display: inline-flex; text-decoration: none;">Browse All 33 Machines</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+    <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-col-brand">
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark">PH</span>
+          <span class="brand-copy">
+            <strong>PUKHRAJ HASTIMAL & CO.</strong>
+            <small>Precision Engineering · Powerful Performance</small>
+          </span>
+        </a>
+        <p style="margin-top: 14px; font-size: 13.5px; color: #a4b8af; line-height: 1.6; max-width: 380px;">
+          Supplier and contractor for industrial machinery, process thermal systems, plant utilities, and power distribution infrastructure.
+        </p>
+        <div style="margin-top: 14px; font-size: 12.5px; color: #879c93; font-family: var(--font-mono);">
+          GSTIN: 27AFMPJ3478A1ZG<br>
+          PO REF: PH/001/26-27
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">EQUIPMENT FLEET</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="products.html" style="color: #c2d4cb; text-decoration: none;">All 33 Machines</a></li>
+          <li><a href="products.html?filter=po" style="color: #c2d4cb; text-decoration: none;">Original PO Items (01–08)</a></li>
+          <li><a href="products.html?filter=supplementary" style="color: #c2d4cb; text-decoration: none;">Plant Utilities (09–13)</a></li>
+          <li><a href="products.html?filter=extended" style="color: #c2d4cb; text-decoration: none;">Technical Specifications (14–33)</a></li>
+          <li><a href="categories.html" style="color: #c2d4cb; text-decoration: none;">All 7 Product Categories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">COMPANY & RESOURCES</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="about.html" style="color: #c2d4cb; text-decoration: none;">About Our Company</a></li>
+          <li><a href="industries.html" style="color: #c2d4cb; text-decoration: none;">Industries & Applications</a></li>
+          <li><a href="downloads.html" style="color: #c2d4cb; text-decoration: none;">Downloads & Datasheets</a></li>
+          <li><a href="faq.html" style="color: #c2d4cb; text-decoration: none;">Frequently Asked Questions</a></li>
+          <li><a href="contact.html" style="color: #c2d4cb; text-decoration: none;">Contact Procurement</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">LEGAL & COMPLIANCE</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="privacy.html" style="color: #c2d4cb; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="terms.html" style="color: #c2d4cb; text-decoration: none;">Terms & Conditions</a></li>
+          <li><a href="shipping.html" style="color: #c2d4cb; text-decoration: none;">Shipping & Delivery</a></li>
+          <li><a href="search.html" style="color: #c2d4cb; text-decoration: none;">Catalogue Search</a></li>
+          <li><a href="quote.html" style="color: var(--lime); font-weight: 700; text-decoration: none;">Request Quotation ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom" style="margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; color: #7f958a;">
+      <span>© 2026 M/s. Pukhraj Hastimal & Co. · Registered Office: Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</span>
+      <span>Official Contact: <a href="mailto:pukhrajhastimal@gmail.com" style="color: var(--lime);">pukhrajhastimal@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <!-- Global Mobile Nav Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    if (menuToggle && primaryNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = primaryNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
+
+  <script src="assets/products-data.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryParam = urlParams.get("q") || "";
+      const searchInput = document.getElementById("liveSearchInput");
+      const resultsGrid = document.getElementById("searchResultsGrid");
+      const searchCount = document.getElementById("searchCount");
+      const zeroResults = document.getElementById("zeroResults");
+
+      searchInput.value = queryParam;
+
+      function performSearch(query) {
+        const q = query.trim().toLowerCase();
+        const productList = Object.values(window.PRODUCTS_DATA || {});
+        
+        const matches = productList.filter(item => {
+          if (!q) return true;
+          const text = [
+            item.name,
+            item.shortName,
+            item.categoryLabel,
+            item.hsn || "",
+            item.rate || "",
+            item.description,
+            item.applications,
+            (item.specs || []).map(s => s.label + " " + s.value).join(" "),
+            (item.features || []).join(" ")
+          ].join(" ").toLowerCase();
+          return text.includes(q);
+        });
+
+        resultsGrid.innerHTML = "";
+
+        if (matches.length === 0) {
+          searchCount.textContent = `0 results for "${query}"`;
+          zeroResults.hidden = false;
+          resultsGrid.hidden = true;
+        } else {
+          zeroResults.hidden = true;
+          resultsGrid.hidden = false;
+          searchCount.textContent = query 
+            ? `Found ${matches.length} matching machine${matches.length > 1 ? 's' : ''} for "${query}"`
+            : `Displaying all ${matches.length} machines in catalogue`;
+
+          matches.forEach((p, idx) => {
+            const card = document.createElement("article");
+            card.className = "equipment-card";
+
+            let badgeClass = "badge-po";
+            let badgeText = p.badgeLabel || "VERIFIED PO";
+            if (p.statusType === "supplementary") badgeClass = "badge-sup";
+            else if (p.statusType === "extended") {
+              badgeClass = "badge-tech";
+              badgeText = "SPECIFICATION REFERENCE";
+            }
+
+            const itemNumber = String(p.poItemNo || (idx + 1)).padStart(2, '0');
+            const rateBadge = p.rate && p.rate.includes("₹")
+              ? `<div class="card-rate-tag">PO Rate: ${p.rate} (Qty: ${p.qty})</div>`
+              : `<div class="card-rate-tag sup-rate">Status: Contact for Quotation</div>`;
+
+            card.innerHTML = `
+              <a class="card-image-wrap" href="product-detail.html?id=${encodeURIComponent(p.id)}">
+                <img src="${p.image}" alt="${p.alt}" loading="lazy">
+                <span class="card-number">${itemNumber}</span>
+                <span class="card-badge ${badgeClass}">${badgeText}</span>
+                <span class="card-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>${p.categoryLabel.toUpperCase()}</span>
+                  <span>${p.hsn ? 'HSN: ' + p.hsn : 'CODE: ' + p.id.toUpperCase()}</span>
+                </div>
+                <h3><a href="product-detail.html?id=${encodeURIComponent(p.id)}" style="color: inherit; text-decoration: none;">${p.shortName}</a></h3>
+                <p>${p.description}</p>
+                ${rateBadge}
+                <div style="display: flex; gap: 10px; margin-top: 16px;">
+                  <a class="card-view-btn" href="product-detail.html?id=${encodeURIComponent(p.id)}" style="flex: 1; text-align: center; text-decoration: none; justify-content: center;">
+                    <span>View Specifications</span>
+                  </a>
+                  <a class="nav-cta" href="quote.html?product=${encodeURIComponent(p.id)}" title="Request quote for ${p.shortName}" style="padding: 0 14px; display: inline-flex; align-items: center; justify-content: center;">
+                    <span>RFQ</span>
+                  </a>
+                </div>
+              </div>
+            `;
+            resultsGrid.appendChild(card);
+          });
+        }
+      }
+
+      searchInput.addEventListener("input", (e) => {
+        performSearch(e.target.value);
+      });
+
+      performSearch(queryParam);
+    });
+  </script>
+</body>
+</html>

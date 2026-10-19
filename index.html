@@ -33,12 +33,14 @@
       </button>
 
       <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#catalogue">Catalogue (13)</a>
-        <a href="#applications">Applications</a>
-        <a href="#po-reference">PO Reference</a>
-        <a href="#contact" class="nav-cta">Request a Quote <span aria-hidden="true">↗</span></a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products (33)</a>
+        <a href="categories.html">Categories</a>
+        <a href="industries.html">Industries</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="contact.html">Contact</a>
+        <a href="quote.html" class="nav-cta">Request a Quote <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -180,7 +182,14 @@
             <p class="eyebrow">VERIFIED MACHINERY CATALOGUE</p>
             <h2>Explore Our Machines<span class="accent-dot">.</span></h2>
           </div>
-          <p>Browse our verified fleet of industrial equipment. Select any machine to view full technical specifications, purchase order details, and request a quotation.</p>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <p style="margin: 0;">Browse our verified fleet of industrial equipment. Select any machine to view full technical specifications, purchase order details, and request a quotation.</p>
+            <div>
+              <a href="products.html" class="nav-cta" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;">
+                <span>View All 33 Machines in Expanded Fleet</span> <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <!-- Filter Controls & Search -->
@@ -677,6 +686,28 @@
                   <option value="sup4_compressor">ROTARY SCREW AIR COMPRESSOR BK90-8GH</option>
                   <option value="sup5_exchanger">SHELL & TUBE HEAT EXCHANGER / CONDENSER</option>
                 </optgroup>
+                <optgroup label="--- 20 Extended Technical Specification Models ---">
+                  <option value="ext1_vacuum_pump">LIQUID-RING INDUSTRIAL VACUUM PUMP</option>
+                  <option value="ext2_gear_pump">POSITIVE DISPLACEMENT ROTARY GEAR PUMP</option>
+                  <option value="ext3_dosing_pump">CHEMICAL DOSING & METERING PUMP</option>
+                  <option value="ext4_circulation_pump">VERTICAL INLINE WATER CIRCULATION PUMP</option>
+                  <option value="ext5_plate_exchanger">GASKETED PLATE & FRAME HEAT EXCHANGER</option>
+                  <option value="ext6_refrig_condenser">AIR-COOLED FINNED-TUBE REFRIGERATION CONDENSER</option>
+                  <option value="ext7_evaporator">INDUSTRIAL FALLING-FILM CHEMICAL EVAPORATOR</option>
+                  <option value="ext8_storage_tank">STAINLESS STEEL CHEMICAL STORAGE TANK</option>
+                  <option value="ext9_mixing_tank">JACKETED MIXING TANK WITH MOTORIZED AGITATOR</option>
+                  <option value="ext10_air_receiver">COMPRESSED AIR RECEIVER PRESSURE VESSEL</option>
+                  <option value="ext11_centrifugal_blower">HIGH-PRESSURE CENTRIFUGAL AIR BLOWER</option>
+                  <option value="ext12_air_dryer">REFRIGERATED COMPRESSED AIR DRYER UNIT</option>
+                  <option value="ext13_filtration_system">MULTI-GRADE SAND & CARBON WATER FILTRATION SKID</option>
+                  <option value="ext14_bag_filter">STAINLESS STEEL BAG FILTER HOUSING</option>
+                  <option value="ext15_cartridge_filter">MULTI-ELEMENT CARTRIDGE FILTER HOUSING</option>
+                  <option value="ext16_ro_system">INDUSTRIAL REVERSE OSMOSIS (RO) PLANT</option>
+                  <option value="ext17_water_softener">AUTOMATED ION-EXCHANGE WATER SOFTENER PLANT</option>
+                  <option value="ext18_diesel_generator">INDUSTRIAL DIESEL GENERATOR SET (DG SET)</option>
+                  <option value="ext19_electric_motor">HEAVY-DUTY IE3 EFFICIENCY ELECTRIC MOTOR</option>
+                  <option value="ext20_mcc_panel">COMPARTMENTALIZED MOTOR CONTROL CENTRE (MCC PANEL)</option>
+                </optgroup>
               </select>
             </div>
             <div class="form-row">
@@ -706,22 +737,60 @@
   <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-main">
-      <a class="brand footer-brand" href="#home">
-        <span class="brand-mark">PH</span>
-        <span class="brand-copy">
-          <strong>PUKHRAJ HASTIMAL & CO.</strong>
-          <small>Precision Engineering · Powerful Performance</small>
-        </span>
-      </a>
-      <p>
-        M/s. Pukhraj Hastimal & Co. Industrial Machinery & Equipment<br>
-        <span>Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004 · GST: 27AFMPJ3478A1ZG</span>
-      </p>
-      <a class="back-top" href="#home">Back to top ↑</a>
+      <div class="footer-col-brand">
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark">PH</span>
+          <span class="brand-copy">
+            <strong>PUKHRAJ HASTIMAL & CO.</strong>
+            <small>Precision Engineering · Powerful Performance</small>
+          </span>
+        </a>
+        <p style="margin-top: 14px; font-size: 13.5px; color: #a4b8af; line-height: 1.6; max-width: 380px;">
+          Supplier and contractor for industrial machinery, process thermal systems, plant utilities, and power distribution infrastructure.
+        </p>
+        <div style="margin-top: 14px; font-size: 12.5px; color: #879c93; font-family: var(--font-mono);">
+          GSTIN: 27AFMPJ3478A1ZG<br>
+          PO REF: PH/001/26-27
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">EQUIPMENT FLEET</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="products.html" style="color: #c2d4cb; text-decoration: none;">All 33 Machines</a></li>
+          <li><a href="products.html?filter=po" style="color: #c2d4cb; text-decoration: none;">Original PO Items (01–08)</a></li>
+          <li><a href="products.html?filter=supplementary" style="color: #c2d4cb; text-decoration: none;">Plant Utilities (09–13)</a></li>
+          <li><a href="products.html?filter=extended" style="color: #c2d4cb; text-decoration: none;">Technical Specifications (14–33)</a></li>
+          <li><a href="categories.html" style="color: #c2d4cb; text-decoration: none;">All 7 Product Categories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">COMPANY & RESOURCES</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="about.html" style="color: #c2d4cb; text-decoration: none;">About Our Company</a></li>
+          <li><a href="industries.html" style="color: #c2d4cb; text-decoration: none;">Industries & Applications</a></li>
+          <li><a href="downloads.html" style="color: #c2d4cb; text-decoration: none;">Downloads & Datasheets</a></li>
+          <li><a href="faq.html" style="color: #c2d4cb; text-decoration: none;">Frequently Asked Questions</a></li>
+          <li><a href="contact.html" style="color: #c2d4cb; text-decoration: none;">Contact Procurement</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">LEGAL & COMPLIANCE</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="privacy.html" style="color: #c2d4cb; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="terms.html" style="color: #c2d4cb; text-decoration: none;">Terms & Conditions</a></li>
+          <li><a href="shipping.html" style="color: #c2d4cb; text-decoration: none;">Shipping & Delivery</a></li>
+          <li><a href="search.html" style="color: #c2d4cb; text-decoration: none;">Catalogue Search</a></li>
+          <li><a href="quote.html" style="color: var(--lime); font-weight: 700; text-decoration: none;">Request Quotation ↗</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year">2026</span> M/s. Pukhraj Hastimal & Co. All rights reserved.</span>
-      <span>240-Frame Interactive Scroll Assembly Engine · Verified Industrial Specifications</span>
+
+    <div class="container footer-bottom" style="margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; color: #7f958a;">
+      <span>© 2026 M/s. Pukhraj Hastimal & Co. · Registered Office: Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</span>
+      <span>Official Contact: <a href="mailto:pukhrajhastimal@gmail.com" style="color: var(--lime);">pukhrajhastimal@gmail.com</a></span>
     </div>
   </footer>
 
@@ -756,6 +825,9 @@
   <!-- GSAP & SCROLLTRIGGER CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- CENTRAL PRODUCT CATALOGUE DATABASE -->
+  <script src="assets/products-data.js"></script>
 
   <!-- CORE LOGIC & ANIMATION ENGINE -->
   <script src="script.js"></script>

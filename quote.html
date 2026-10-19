@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1a16">
+  <meta name="description" content="Request a formal procurement quotation from M/s. Pukhraj Hastimal & Co. for verified industrial boilers, electrical infrastructure, pumps, compressors, and plant equipment.">
+  <title>Request a Quotation | Pukhraj Hastimal & Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Pukhraj Hastimal & Co. Homepage">
+        <span class="brand-mark">PH</span>
+        <span class="brand-copy">
+          <strong>PUKHRAJ HASTIMAL & CO.</strong>
+          <small>Industrial Equipment · Solutions · Trust</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="products.html">Products (33)</a> <a href="categories.html">Categories</a> <a href="industries.html">Industries</a> <a href="downloads.html">Downloads</a> <a href="contact.html">Contact</a>
+        <a href="quote.html" class="nav-cta active">Request a Quote <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subpage-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span class="current">Request a Quote (RFQ)</span>
+        </nav>
+        <h1 class="page-title">Procurement Quotation <em>Request.</em></h1>
+        <p class="hero-subheading">
+          Submit your technical specifications, required capacity, and organization parameters. Our engineering team prepares formal price quotations and delivery schedules.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
+          
+          <!-- Quotation Form (7 Required Fields) -->
+          <form class="contact-form" id="rfqForm" style="margin: 0; box-shadow: var(--shadow-sm); border: 1px solid var(--line); border-radius: var(--radius-md); padding: clamp(24px, 4vw, 40px); background: var(--white);">
+            <div class="form-heading">
+              <h2 style="font-family: var(--font-heading); font-size: 22px; margin: 0; color: var(--forest-dark);">Official Machinery RFQ Form</h2>
+              <span style="font-size: 12.5px; color: var(--muted);">* All fields mandatory for formal pricing</span>
+            </div>
+
+            <!-- Field 1 & 2: Customer Name & Company Name -->
+            <div class="form-grid-2">
+              <div class="form-row">
+                <label for="name">1. Customer Name / Authorized Representative *</label>
+                <input id="name" name="name" autocomplete="name" required maxlength="100" placeholder="e.g. Rajesh Sharma, Head of Engineering">
+              </div>
+              <div class="form-row">
+                <label for="company">2. Company Name / Purchasing Enterprise *</label>
+                <input id="company" name="company" autocomplete="organization" required maxlength="120" placeholder="e.g. Apex Speciality Chemicals Pvt Ltd">
+              </div>
+            </div>
+
+            <!-- Field 3 & 4: Email Address & Phone Number -->
+            <div class="form-grid-2">
+              <div class="form-row">
+                <label for="email">3. Official Corporate Email Address *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required maxlength="150" placeholder="e.g. procurement@company.com">
+              </div>
+              <div class="form-row">
+                <label for="phone">4. Direct Phone / Mobile Number *</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="e.g. +91 98200 XXXXX">
+              </div>
+            </div>
+
+            <!-- Field 5 & 6: Machine of Interest & Quantity -->
+            <div class="form-grid-2">
+              <div class="form-row">
+                <label for="equipment">5. Machine of Interest (Select from 33 Items) *</label>
+                <select id="equipment" name="equipment" required style="width: 100%;">
+                  <option value="">Select machinery model...</option>
+                  
+                  <optgroup label="--- 8 Original Purchase Order Machines (PO Ref: PH/001/26-27) ---">
+                    <option value="po1_boiler">BOILER 850 KG/HR CAPACITY (Dual Burner) — Item 01</option>
+                    <option value="po2_insulation">HOT & COLD INSULATION LRB MATTRESS & CLADDING — Item 02</option>
+                    <option value="po3_apfc1">APFC PANELS WITH HARMONIC FILTERS — Item 03</option>
+                    <option value="po4_ltbreaker">TRANSFORMER & LT ORRECTION BREAKER — Item 04</option>
+                    <option value="po5_htbreaker">TRANSFORMER & HT CONNECTION BREAKER (VCB) — Item 05</option>
+                    <option value="po6_apfc2">APFC PANNELS WITH HARMONIC FILTERS — Item 06</option>
+                    <option value="po7_network">LT NETWORKING IN PLANT & SWITCHGEAR — Item 07</option>
+                    <option value="po8_electrification">ELECTRIFICATION, CABLE TRAYS & STARTERS — Item 08</option>
+                  </optgroup>
+
+                  <optgroup label="--- 5 Supplementary Plant Utilities (From Client Facility Photos) ---">
+                    <option value="sup1_cooling">INDUSTRIAL COOLING TOWER (INDUCED DRAFT)</option>
+                    <option value="sup2_chiller">WATER-COOLED SCREW CHILLER (ZENVENT ENGINEERING)</option>
+                    <option value="sup3_pump">CENTRIFUGAL PROCESS & CHEMICAL SLURRY PUMP</option>
+                    <option value="sup4_compressor">ROTARY SCREW AIR COMPRESSOR BK90-8GH</option>
+                    <option value="sup5_exchanger">SHELL & TUBE HEAT EXCHANGER / INDUSTRIAL CONDENSER</option>
+                  </optgroup>
+
+                  <optgroup label="--- 20 Extended Technical Specification Models ---">
+                    <option value="ext1_vacuum_pump">LIQUID-RING INDUSTRIAL VACUUM PUMP</option>
+                    <option value="ext2_gear_pump">POSITIVE DISPLACEMENT ROTARY GEAR PUMP</option>
+                    <option value="ext3_dosing_pump">CHEMICAL DOSING & METERING PUMP</option>
+                    <option value="ext4_circulation_pump">VERTICAL INLINE WATER CIRCULATION PUMP</option>
+                    <option value="ext5_plate_exchanger">GASKETED PLATE & FRAME HEAT EXCHANGER</option>
+                    <option value="ext6_refrig_condenser">AIR-COOLED FINNED-TUBE REFRIGERATION CONDENSER</option>
+                    <option value="ext7_evaporator">INDUSTRIAL FALLING-FILM CHEMICAL EVAPORATOR</option>
+                    <option value="ext8_storage_tank">STAINLESS STEEL CHEMICAL STORAGE TANK</option>
+                    <option value="ext9_mixing_tank">JACKETED MIXING TANK WITH MOTORIZED AGITATOR</option>
+                    <option value="ext10_air_receiver">COMPRESSED AIR RECEIVER PRESSURE VESSEL</option>
+                    <option value="ext11_centrifugal_blower">HIGH-PRESSURE CENTRIFUGAL AIR BLOWER</option>
+                    <option value="ext12_air_dryer">REFRIGERATED COMPRESSED AIR DRYER UNIT</option>
+                    <option value="ext13_filtration_system">MULTI-GRADE SAND & CARBON WATER FILTRATION SKID</option>
+                    <option value="ext14_bag_filter">STAINLESS STEEL BAG FILTER HOUSING</option>
+                    <option value="ext15_cartridge_filter">MULTI-ELEMENT CARTRIDGE FILTER HOUSING</option>
+                    <option value="ext16_ro_system">INDUSTRIAL REVERSE OSMOSIS (RO) PLANT</option>
+                    <option value="ext17_water_softener">AUTOMATED ION-EXCHANGE WATER SOFTENER PLANT</option>
+                    <option value="ext18_diesel_generator">INDUSTRIAL DIESEL GENERATOR SET (DG SET)</option>
+                    <option value="ext19_electric_motor">HEAVY-DUTY IE3 EFFICIENCY ELECTRIC MOTOR</option>
+                    <option value="ext20_mcc_panel">COMPARTMENTALIZED MOTOR CONTROL CENTRE (MCC PANEL)</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="quantity">6. Quantity Required *</label>
+                <input id="quantity" name="quantity" type="number" min="1" max="500" value="1" required>
+              </div>
+            </div>
+
+            <!-- Field 7: Technical Specifications / Message -->
+            <div class="form-row">
+              <label for="message">7. Technical Requirements, Operating Parameters & Delivery Location *</label>
+              <textarea id="message" name="message" required minlength="15" maxlength="2500" rows="5" placeholder="Detail your process requirements, required capacity, design pressure, fluid medium, operating temperature, installation state/city, and required project delivery timeline..."></textarea>
+            </div>
+
+            <button class="submit-button" type="submit" style="margin-top: 10px;">
+              <span>Format & Dispatch Quotation RFQ</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            
+            <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+
+            <div style="margin-top: 20px; padding: 14px 16px; background: #f8faf8; border: 1px solid #e1e7e2; border-radius: 6px; font-size: 12.5px; color: var(--muted); line-height: 1.6;">
+              <strong>Procurement Dispatch Notice:</strong> This secure form client-side formats your full RFQ inquiry and launches your registered email client addressed directly to <code>pukhrajhastimal@gmail.com</code>. No intermediate cloud database stores or exposes your confidential engineering data.
+            </div>
+          </form>
+
+          <!-- Sidebar Information Card -->
+          <div style="background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 28px; box-shadow: var(--shadow-sm);">
+            <h3 style="font-family: var(--font-heading); font-size: 18px; color: var(--forest-dark); margin: 0 0 16px;">
+              Official Procurement Desk
+            </h3>
+
+            <div style="display: flex; flex-direction: column; gap: 16px; font-size: 13.5px;">
+              <div>
+                <strong style="color: var(--forest); display: block; font-size: 12px; font-family: var(--font-mono);">BUYER / CONTRACTOR:</strong>
+                <span>M/s. PUKHRAJ HASTIMAL & CO.</span>
+              </div>
+
+              <div>
+                <strong style="color: var(--forest); display: block; font-size: 12px; font-family: var(--font-mono);">REGISTERED OFFICE:</strong>
+                <span>Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</span>
+              </div>
+
+              <div>
+                <strong style="color: var(--forest); display: block; font-size: 12px; font-family: var(--font-mono);">GST REGISTRATION:</strong>
+                <span style="font-family: var(--font-mono); font-weight: 700; color: #1e5938;">27AFMPJ3478A1ZG</span>
+              </div>
+
+              <div>
+                <strong style="color: var(--forest); display: block; font-size: 12px; font-family: var(--font-mono);">DIRECT RFQ EMAIL:</strong>
+                <a href="mailto:pukhrajhastimal@gmail.com" style="color: #1e663a; font-weight: 600;">pukhrajhastimal@gmail.com</a>
+              </div>
+
+              <div style="margin-top: 12px; padding: 14px; background: #eef6ec; border: 1px solid #c9e3c4; border-radius: 6px;">
+                <strong style="display: block; font-size: 12px; color: #1e5938; margin-bottom: 4px;">PURCHASE ORDER REFERENCE:</strong>
+                <span style="font-size: 12.5px; color: #2e4d3a;">
+                  PO Ref: PH/001/26-27<br>
+                  Consignee: Indian Emulsifiers Limited, MIDC Khed, Ratnagiri
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-col-brand">
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark">PH</span>
+          <span class="brand-copy">
+            <strong>PUKHRAJ HASTIMAL & CO.</strong>
+            <small>Precision Engineering · Powerful Performance</small>
+          </span>
+        </a>
+        <p style="margin-top: 14px; font-size: 13.5px; color: #a4b8af; line-height: 1.6; max-width: 380px;">
+          Supplier and contractor for industrial machinery, process thermal systems, plant utilities, and power distribution infrastructure.
+        </p>
+        <div style="margin-top: 14px; font-size: 12.5px; color: #879c93; font-family: var(--font-mono);">
+          GSTIN: 27AFMPJ3478A1ZG<br>
+          PO REF: PH/001/26-27
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">EQUIPMENT FLEET</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="products.html" style="color: #c2d4cb; text-decoration: none;">All 33 Machines</a></li>
+          <li><a href="products.html?filter=po" style="color: #c2d4cb; text-decoration: none;">Original PO Items (01–08)</a></li>
+          <li><a href="products.html?filter=supplementary" style="color: #c2d4cb; text-decoration: none;">Plant Utilities (09–13)</a></li>
+          <li><a href="products.html?filter=extended" style="color: #c2d4cb; text-decoration: none;">Technical Specifications (14–33)</a></li>
+          <li><a href="categories.html" style="color: #c2d4cb; text-decoration: none;">All 7 Product Categories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">COMPANY & RESOURCES</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="about.html" style="color: #c2d4cb; text-decoration: none;">About Our Company</a></li>
+          <li><a href="industries.html" style="color: #c2d4cb; text-decoration: none;">Industries & Applications</a></li>
+          <li><a href="downloads.html" style="color: #c2d4cb; text-decoration: none;">Downloads & Datasheets</a></li>
+          <li><a href="faq.html" style="color: #c2d4cb; text-decoration: none;">Frequently Asked Questions</a></li>
+          <li><a href="contact.html" style="color: #c2d4cb; text-decoration: none;">Contact Procurement</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">LEGAL & COMPLIANCE</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+          <li><a href="privacy.html" style="color: #c2d4cb; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="terms.html" style="color: #c2d4cb; text-decoration: none;">Terms & Conditions</a></li>
+          <li><a href="shipping.html" style="color: #c2d4cb; text-decoration: none;">Shipping & Delivery</a></li>
+          <li><a href="search.html" style="color: #c2d4cb; text-decoration: none;">Catalogue Search</a></li>
+          <li><a href="quote.html" style="color: var(--lime); font-weight: 700; text-decoration: none;">Request Quotation ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom" style="margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; color: #7f958a;">
+      <span>© 2026 M/s. Pukhraj Hastimal & Co. · Registered Office: Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</span>
+      <span>Official Contact: <a href="mailto:pukhrajhastimal@gmail.com" style="color: var(--lime);">pukhrajhastimal@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <!-- Global Mobile Nav Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    if (menuToggle && primaryNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = primaryNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
+
+  <script src="assets/products-data.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const equipmentSelect = document.getElementById("equipment");
+      const preselectId = urlParams.get("product") || "";
+
+      if (preselectId && equipmentSelect) {
+        for (let opt of equipmentSelect.options) {
+          if (opt.value === preselectId) {
+            equipmentSelect.value = preselectId;
+            break;
+          }
+        }
+      }
+
+      const rfqForm = document.getElementById("rfqForm");
+      const formFeedback = document.getElementById("formFeedback");
+
+      rfqForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!rfqForm.reportValidity()) return;
+
+        const formData = new FormData(rfqForm);
+        const customerName = formData.get("name") || "";
+        const companyName = formData.get("company") || "";
+        const email = formData.get("email") || "";
+        const phone = formData.get("phone") || "";
+        const selectedMachineId = formData.get("equipment") || "";
+        const quantity = formData.get("quantity") || "1";
+        const message = formData.get("message") || "";
+
+        const productObj = window.PRODUCTS_DATA ? window.PRODUCTS_DATA[selectedMachineId] : null;
+        const machineTitle = productObj ? productObj.name : selectedMachineId;
+        const poStatus = productObj && productObj.statusType === "po"
+          ? `Verified PO Line Item #${productObj.poItemNo} (HSN: ${productObj.hsn})`
+          : (productObj && productObj.statusType === "supplementary" ? "Supplementary Plant Utility" : "Extended Technical Model");
+
+        const subject = `Official RFQ: ${machineTitle} — [${companyName}]`;
+        const body = [
+          `FORMAL INDUSTRIAL PROCUREMENT ENQUIRY (RFQ)`,
+          `============================================================`,
+          `Authorized Representative: ${customerName}`,
+          `Company Name:              ${companyName}`,
+          `Corporate Email:           ${email}`,
+          `Direct Phone:              ${phone}`,
+          `Date of Request:           ${new Date().toLocaleDateString("en-IN")}`,
+          `------------------------------------------------------------`,
+          `Machine of Interest:       ${machineTitle}`,
+          `Catalogue Classification:  ${poStatus}`,
+          `Required Quantity:         ${quantity} NOS`,
+          `------------------------------------------------------------`,
+          `Engineering Parameters & Scope:`,
+          message,
+          `============================================================`,
+          `To: M/s. PUKHRAJ HASTIMAL & CO.`,
+          `Registered Office: Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004`,
+          `GST NO: 27AFMPJ3478A1ZG | Email: pukhrajhastimal@gmail.com`
+        ].join("\n");
+
+        if (formFeedback) {
+          formFeedback.textContent = "Formatting RFQ parameters and opening your email application...";
+          formFeedback.className = "form-feedback feedback-active";
+        }
+
+        setTimeout(() => {
+          window.location.href = `mailto:pukhrajhastimal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          if (formFeedback) {
+            formFeedback.textContent = "Your email application has been launched with the complete quotation enquiry draft.";
+          }
+        }, 350);
+      });
+    });
+  </script>
+</body>
+</html>

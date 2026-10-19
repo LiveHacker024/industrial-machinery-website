@@ -673,7 +673,7 @@ const equipmentSelect = document.getElementById("equipment");
 const quantityInput = document.getElementById("quantity");
 
 function openProductModal(id) {
-  const item = products[id];
+  const item = (window.PRODUCTS_DATA && window.PRODUCTS_DATA[id]) || products[id];
   if (!item || !dialog) return;
 
   dialogImage.src = item.image;
@@ -788,11 +788,11 @@ if (contactForm) {
     const quantity = formData.get("quantity") || "1";
     const message = formData.get("message") || "";
 
-    const productObj = products[selectedMachineId];
-    const machineTitle = productObj ? productObj.name : selectedMachineId;
+    const productObj = (window.PRODUCTS_DATA && window.PRODUCTS_DATA[selectedMachineId]) || products[selectedMachineId];
+    const machineTitle = productObj ? (productObj.shortName || productObj.name) : selectedMachineId;
     const poStatus = productObj && productObj.isPoItem 
       ? `PO Line Item #${productObj.poItemNo} (HSN: ${productObj.hsn})` 
-      : "Supplementary Plant Equipment";
+      : (productObj && productObj.statusType === "extended" ? "Extended Technical Model" : "Supplementary Plant Utility");
 
     const subject = `Official RFQ: ${machineTitle} — [${companyName}]`;
     const body = [
