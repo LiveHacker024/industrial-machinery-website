@@ -465,6 +465,7 @@ function updateTelemetry(progress, frameIndex) {
 }
 
 function preloadFrames() {
+  if (!canvas) return;
   const isMobile = window.innerWidth <= 768;
 
   // On mobile touchscreens: Load completed frame immediately, saving cellular bandwidth and memory
@@ -874,8 +875,11 @@ if (yearEl) {
 // 7. INITIALIZATION LIFECYCLE
 // ============================================================================
 document.addEventListener("DOMContentLoaded", () => {
-  resizeCanvas();
-  preloadFrames();
-  initScrollAnimation();
+  const heroCanvas = document.getElementById("heroCanvas");
+  if (heroCanvas) {
+    resizeCanvas();
+    preloadFrames();
+    initScrollAnimation();
+  }
   updateCatalogue();
 });

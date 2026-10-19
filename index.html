@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
   
-  <!-- Fallback critical link for immediate frame 1 render -->
-  <link rel="preload" as="image" href="assets/hero-frame-start.jpg">
+  <!-- Critical Preload for Hero Banner Image -->
+  <link rel="preload" as="image" href="assets/hero-banner-hd.jpg">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -47,120 +47,115 @@
 
   <main id="main">
     <!-- ====================================================================
-         SCROLL-DRIVEN INDUSTRIAL MACHINERY HERO ANIMATION
+         HERO BANNER SECTION (CLIENT INDUSTRIAL PLANT PHOTOGRAPH)
          ==================================================================== -->
-    <section class="hero-scroll-container" id="home" aria-label="Interactive Industrial Machinery Assembly Hero">
-      <div class="hero-pin-viewport" id="heroPinViewport">
-        
-        <!-- Industrial Plant Facility Hero Backdrop (Client Uploaded Photograph) -->
-        <div class="hero-backdrop-layer" id="heroBackdropLayer" aria-hidden="true">
-          <picture>
-            <source media="(max-width: 768px)" srcset="assets/hero-banner-mobile.jpg">
-            <img class="hero-backdrop-img" src="assets/hero-banner-hd.jpg" alt="Industrial Manufacturing Plant & Heavy Machinery Floor" loading="eager" fetchpriority="high">
-          </picture>
-          <div class="hero-backdrop-overlay"></div>
-        </div>
+    <section class="hero-banner-section" id="home" aria-label="Industrial Machinery & Engineering Infrastructure">
+      <!-- Background Picture Layer -->
+      <div class="hero-backdrop-layer" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 768px)" srcset="assets/hero-banner-mobile.jpg">
+          <img class="hero-backdrop-img" src="assets/hero-banner-hd.jpg" alt="Industrial Manufacturing Plant & Heavy Machinery Floor" loading="eager" fetchpriority="high">
+        </picture>
+        <div class="hero-backdrop-overlay"></div>
+      </div>
 
-        <!-- High-Performance Canvas for 240-Frame Scroll Sync -->
-        <canvas id="heroCanvas" class="hero-canvas" aria-label="3D industrial boiler assembly scroll animation"></canvas>
-        
-        <!-- Immediate Fallback Image (prevents layout shift and blank initial state) -->
-        <img id="heroFallback" class="hero-poster-fallback" src="assets/hero-frame-start.jpg" alt="Industrial Steam Boiler Preliminary Assembly View" loading="eager">
-
-        <!-- Cinematic Shading Vignettes -->
-        <div class="hero-vignette-left" aria-hidden="true"></div>
-        <div class="hero-vignette-top" aria-hidden="true"></div>
-        <div class="hero-vignette-bottom" aria-hidden="true"></div>
-
-        <!-- Stable & Readable Hero Typography Overlay -->
-        <div class="hero-overlay">
-          <div class="container hero-grid-layout">
-            
-            <!-- Left Column: Typography, Value Proposition, Action Buttons -->
-            <div class="hero-text-column">
-              <div class="hero-eyebrow">
-                <span class="eyebrow-dot"></span>
-                INDUSTRIAL MACHINERY & EQUIPMENT
-              </div>
-
-              <h1 class="hero-title">
-                Precision Engineering.<br>
-                <span class="title-accent">Powerful Performance.</span>
-              </h1>
-
-              <p class="hero-description">
-                Explore industrial machinery and engineering equipment for demanding industrial applications.
-              </p>
-
-              <div class="hero-cta-group">
-                <a class="btn-hero-primary" href="#catalogue" id="heroExploreBtn">
-                  <span>Explore Our Machines</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-                <a class="btn-hero-secondary" href="#contact" id="heroQuoteBtn">
-                  <span>Request a Quote</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-              </div>
-
-              <div class="hero-trust-row">
-                <div class="trust-item">
-                  <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                  <span>Reliable Equipment</span>
-                </div>
-                <div class="trust-item">
-                  <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  <span>Industrial-Grade Quality</span>
-                </div>
-                <div class="trust-item">
-                  <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                  </svg>
-                  <span>Efficient Performance</span>
-                </div>
-              </div>
+      <!-- Hero Typography & Call-To-Action Overlay -->
+      <div class="hero-overlay">
+        <div class="container hero-grid-layout">
+          
+          <!-- Left Column: Typography, Value Proposition, Action Buttons -->
+          <div class="hero-text-column">
+            <div class="hero-eyebrow">
+              <span class="eyebrow-dot"></span>
+              INDUSTRIAL MACHINERY & EQUIPMENT
             </div>
 
-            <!-- Right Column: Interactive Assembly Telemetry Card -->
-            <div class="hero-telemetry-column">
-              <div class="telemetry-card" id="telemetryCard" aria-live="polite">
-                <div class="telemetry-header">
-                  <span class="telemetry-live"><span class="telemetry-beacon"></span> LIVE ASSEMBLY</span>
-                  <span>CAD / 3D SYNC</span>
-                </div>
-                <div class="telemetry-model">ICI STEAM BOILER · 850 KG/HR</div>
-                <div class="telemetry-progress-track">
-                  <div class="telemetry-progress-fill" id="telemetryFill"></div>
-                </div>
-                <div class="telemetry-footer">
-                  <span class="telemetry-percent" id="telemetryPercent">0% ASSEMBLED</span>
-                  <span id="telemetryFrame">FRAME 001 / 240</span>
-                </div>
-              </div>
+            <h1 class="hero-title">
+              Precision Engineering.<br>
+              <span class="title-accent">Powerful Performance.</span>
+            </h1>
+
+            <p class="hero-description">
+              Explore heavy industrial machinery, process utilities, and turnkey plant equipment for demanding manufacturing applications across India.
+            </p>
+
+            <div class="hero-cta-group">
+              <a class="btn-hero-primary" href="#catalogue" id="heroExploreBtn">
+                <span>Explore Our Machines</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a class="btn-hero-secondary" href="#contact" id="heroQuoteBtn">
+                <span>Request a Quote</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
             </div>
 
+            <div class="hero-trust-row">
+              <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Reliable Equipment</span>
+              </div>
+              <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Industrial-Grade Quality</span>
+              </div>
+              <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <span>Efficient Performance</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Scroll down prompt -->
-        <div class="hero-scroll-prompt" id="scrollPrompt">
-          <div class="scroll-icon-wrap">
-            <div class="scroll-wheel"></div>
+          <!-- Right Column: Industrial Overview Card -->
+          <div class="hero-feature-column">
+            <div class="hero-stats-card">
+              <div class="stats-badge">
+                <span class="stats-pulse"></span>
+                <span>ESTABLISHED ENGINEERING SUPPLIER</span>
+              </div>
+              <h3 class="stats-heading">M/s. PUKHRAJ HASTIMAL & CO.</h3>
+              <p class="stats-desc">Supplying heavy manufacturing infrastructure, process machinery, thermal systems, and electrical substations with verified purchase documentation.</p>
+              
+              <div class="stats-metrics-grid">
+                <div class="metric-item">
+                  <span class="metric-num">33+</span>
+                  <span class="metric-label">Industrial Machines</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">08</span>
+                  <span class="metric-label">Verified PO Items</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">100%</span>
+                  <span class="metric-label">Industrial Grade</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-num">MIDC</span>
+                  <span class="metric-label">Delivery Scope</span>
+                </div>
+              </div>
+
+              <div class="stats-footer">
+                <span class="stats-gst">GST: 27AFMPJ3478A1ZG</span>
+                <a href="#catalogue" class="stats-link">View Catalogue →</a>
+              </div>
+            </div>
           </div>
-          <span class="scroll-prompt-text">Scroll to Assemble Machinery</span>
-        </div>
 
+        </div>
       </div>
     </section>
 
