@@ -52,6 +52,15 @@
     <section class="hero-scroll-container" id="home" aria-label="Interactive Industrial Machinery Assembly Hero">
       <div class="hero-pin-viewport" id="heroPinViewport">
         
+        <!-- Industrial Plant Facility Hero Backdrop (Client Uploaded Photograph) -->
+        <div class="hero-backdrop-layer" id="heroBackdropLayer" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/hero-banner-mobile.jpg">
+            <img class="hero-backdrop-img" src="assets/hero-banner-hd.jpg" alt="Industrial Manufacturing Plant & Heavy Machinery Floor" loading="eager" fetchpriority="high">
+          </picture>
+          <div class="hero-backdrop-overlay"></div>
+        </div>
+
         <!-- High-Performance Canvas for 240-Frame Scroll Sync -->
         <canvas id="heroCanvas" class="hero-canvas" aria-label="3D industrial boiler assembly scroll animation"></canvas>
         

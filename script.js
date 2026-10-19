@@ -465,7 +465,19 @@ function updateTelemetry(progress, frameIndex) {
 }
 
 function preloadFrames() {
-  // Load Frame 1 immediately
+  const isMobile = window.innerWidth <= 768;
+
+  // On mobile touchscreens: Load completed frame immediately, saving cellular bandwidth and memory
+  if (isMobile) {
+    loadSingleFrame(TOTAL_FRAMES - 1, () => {
+      resizeCanvas();
+      drawFrame(TOTAL_FRAMES - 1);
+      updateTelemetry(1, TOTAL_FRAMES - 1);
+    });
+    return;
+  }
+
+  // Desktop & High-Speed Viewports: Load Frame 1 immediately, then preload sequence in chunks
   loadSingleFrame(0, () => {
     resizeCanvas();
     drawFrame(0);
@@ -550,48 +562,67 @@ function initScrollAnimation() {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    ScrollTrigger.create({
-      trigger: heroContainer,
-      start: "top top",
-      end: "bottom bottom",
-      pin: heroViewport,
-      scrub: 0.5,
-      anticipatePin: 1,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const targetFrame = Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.floor(progress * (TOTAL_FRAMES - 1))));
-        requestAnimationFrame(() => {
-          drawFrame(targetFrame);
-          updateTelemetry(progress, targetFrame);
+    ScrollTrigger.matchMedia({
+      // Desktop & Large Viewports (> 768px): Full 240-frame interactive scroll assembly
+      "(min-width: 769px)": function() {
+        return ScrollTrigger.create({
+          trigger: heroContainer,
+          start: "top top",
+          end: "bottom bottom",
+          pin: heroViewport,
+          scrub: 0.5,
+          anticipatePin: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const targetFrame = Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.floor(progress * (TOTAL_FRAMES - 1))));
+            requestAnimationFrame(() => {
+              drawFrame(targetFrame);
+              updateTelemetry(progress, targetFrame);
+            });
+          }
+        });
+      },
+
+      // Mobile Touch Viewports (<= 768px): No scroll hijacking, show completed assembly over factory backdrop
+      "(max-width: 768px)": function() {
+        loadSingleFrame(TOTAL_FRAMES - 1, () => {
+          drawFrame(TOTAL_FRAMES - 1);
+          updateTelemetry(1, TOTAL_FRAMES - 1);
         });
       }
     });
   } else {
     // Native Fallback
-    let ticking = false;
-    window.addEventListener("scroll", () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const rect = heroContainer.getBoundingClientRect();
-          const scrollDistance = rect.height - window.innerHeight;
-          let progress = 0;
+    if (window.innerWidth > 768) {
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const rect = heroContainer.getBoundingClientRect();
+            const scrollDistance = rect.height - window.innerHeight;
+            let progress = 0;
 
-          if (rect.top <= 0 && scrollDistance > 0) {
-            progress = Math.min(1, Math.max(0, -rect.top / scrollDistance));
-          } else if (rect.top > 0) {
-            progress = 0;
-          } else {
-            progress = 1;
-          }
+            if (rect.top <= 0 && scrollDistance > 0) {
+              progress = Math.min(1, Math.max(0, -rect.top / scrollDistance));
+            } else if (rect.top > 0) {
+              progress = 0;
+            } else {
+              progress = 1;
+            }
 
-          const targetFrame = Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.floor(progress * (TOTAL_FRAMES - 1))));
-          drawFrame(targetFrame);
-          updateTelemetry(progress, targetFrame);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+            const targetFrame = Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.floor(progress * (TOTAL_FRAMES - 1))));
+            drawFrame(targetFrame);
+            updateTelemetry(progress, targetFrame);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+    } else {
+      loadSingleFrame(TOTAL_FRAMES - 1, () => {
+        drawFrame(TOTAL_FRAMES - 1);
+      });
+    }
   }
 }
 
