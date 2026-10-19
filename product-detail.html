@@ -247,9 +247,15 @@
       const authNoticeText = document.getElementById("authNoticeText");
 
       if (product.statusType === "extended") {
-        authBadge.className = "image-authenticity-badge auth-real";
-        authBadgeText.textContent = "Authentic Industrial Photograph";
-        authNoticeText.textContent = `${product.imageStatus || 'Authentic industrial equipment photograph'}. Verified from manufacturer documentation / open image archives.`;
+        if (product.imageCategory === "illustrative") {
+          authBadge.className = "image-authenticity-badge auth-illustrative";
+          authBadgeText.textContent = "Illustrative Product Visual (Specification Reference)";
+          authNoticeText.textContent = product.imageNote || "Illustrative commercial product photography representing standard industrial model specification and appearance; not actual client-owned equipment.";
+        } else {
+          authBadge.className = "image-authenticity-badge auth-real";
+          authBadgeText.textContent = "Authentic Industrial Photograph";
+          authNoticeText.textContent = `${product.imageStatus || 'Authentic industrial equipment photograph'}. Verified from manufacturer documentation / open image archives.`;
+        }
       } else if (product.statusType === "supplementary") {
         authBadge.className = "image-authenticity-badge auth-real";
         authBadgeText.textContent = "Authentic Client Photograph (Facility Utility)";

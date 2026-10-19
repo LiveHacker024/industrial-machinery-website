@@ -786,7 +786,7 @@ SEARCH_HTML = """<!doctype html>
               badgeText = "SUPPLEMENTARY";
             } else if (p.statusType === "extended") {
               badgeClass = "badge-tech";
-              badgeText = "AUTHENTIC PHOTO";
+              badgeText = p.badgeLabel || (p.imageCategory === "illustrative" ? "SPECIFICATION VISUAL" : "AUTHENTIC PHOTO");
             }
 
             const itemNumber = String(p.poItemNo || (idx + 1)).padStart(2, '0');

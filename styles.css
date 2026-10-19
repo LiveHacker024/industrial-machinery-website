@@ -2037,6 +2037,12 @@ button {
   border: 1px solid #cce2f5;
 }
 
+.image-authenticity-badge.auth-illustrative {
+  background: #fdf8ee;
+  color: #8c5b1a;
+  border: 1px solid #f5debf;
+}
+
 /* Multi-category Filtering Tabs */
 .filter-tabs-wrap {
   display: flex;

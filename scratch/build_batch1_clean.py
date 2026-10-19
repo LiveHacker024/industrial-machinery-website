@@ -301,9 +301,10 @@ PRODUCTS_HTML = """<!doctype html>
             let badgeText = p.badgeLabel || "VERIFIED PO";
             if (p.statusType === "supplementary") {
               badgeClass = "badge-sup";
+              badgeText = "SUPPLEMENTARY";
             } else if (p.statusType === "extended") {
               badgeClass = "badge-tech";
-              badgeText = "AUTHENTIC PHOTO";
+              badgeText = p.badgeLabel || (p.imageCategory === "illustrative" ? "SPECIFICATION VISUAL" : "AUTHENTIC PHOTO");
             }
 
             const itemNumber = String(p.poItemNo || (idx + 1)).padStart(2, '0');
@@ -541,9 +542,15 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
       const authNoticeText = document.getElementById("authNoticeText");
 
       if (product.statusType === "extended") {
-        authBadge.className = "image-authenticity-badge auth-real";
-        authBadgeText.textContent = "Authentic Industrial Photograph";
-        authNoticeText.textContent = `${product.imageStatus || 'Authentic industrial equipment photograph'}. Verified from manufacturer documentation / open image archives.`;
+        if (product.imageCategory === "illustrative") {
+          authBadge.className = "image-authenticity-badge auth-illustrative";
+          authBadgeText.textContent = "Illustrative Product Visual (Specification Reference)";
+          authNoticeText.textContent = product.imageNote || "Illustrative commercial product photography representing standard industrial model specification and appearance; not actual client-owned equipment.";
+        } else {
+          authBadge.className = "image-authenticity-badge auth-real";
+          authBadgeText.textContent = "Authentic Industrial Photograph";
+          authNoticeText.textContent = `${product.imageStatus || 'Authentic industrial equipment photograph'}. Verified from manufacturer documentation / open image archives.`;
+        }
       } else if (product.statusType === "supplementary") {
         authBadge.className = "image-authenticity-badge auth-real";
         authBadgeText.textContent = "Authentic Client Photograph (Facility Utility)";

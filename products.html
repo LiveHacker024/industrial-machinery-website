@@ -269,9 +269,10 @@
             let badgeText = p.badgeLabel || "VERIFIED PO";
             if (p.statusType === "supplementary") {
               badgeClass = "badge-sup";
+              badgeText = "SUPPLEMENTARY";
             } else if (p.statusType === "extended") {
               badgeClass = "badge-tech";
-              badgeText = "AUTHENTIC PHOTO";
+              badgeText = p.badgeLabel || (p.imageCategory === "illustrative" ? "SPECIFICATION VISUAL" : "AUTHENTIC PHOTO");
             }
 
             const itemNumber = String(p.poItemNo || (idx + 1)).padStart(2, '0');
