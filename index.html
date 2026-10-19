@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1a16">
+  <meta name="description" content="M/s. Pukhraj Hastimal & Co. — Industrial machinery & plant equipment catalogue. High-performance steam boilers, thermal insulation, APFC panels, step-down transformers, HT/LT switchgear, cooling towers, chillers, pumps, and compressors.">
+  <title>Pukhraj Hastimal & Co. | Industrial Machinery & Equipment</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Fallback critical link for immediate frame 1 render -->
+  <link rel="preload" as="image" href="assets/hero-frame-start.jpg">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Pukhraj Hastimal and Company Homepage">
+        <span class="brand-mark">PH</span>
+        <span class="brand-copy">
+          <strong>PUKHRAJ HASTIMAL & CO.</strong>
+          <small>Industrial Equipment · Solutions · Trust</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#catalogue">Catalogue (13)</a>
+        <a href="#applications">Applications</a>
+        <a href="#po-reference">PO Reference</a>
+        <a href="#contact" class="nav-cta">Request a Quote <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ====================================================================
+         SCROLL-DRIVEN INDUSTRIAL MACHINERY HERO ANIMATION
+         ==================================================================== -->
+    <section class="hero-scroll-container" id="home" aria-label="Interactive Industrial Machinery Assembly Hero">
+      <div class="hero-pin-viewport" id="heroPinViewport">
+        
+        <!-- High-Performance Canvas for 240-Frame Scroll Sync -->
+        <canvas id="heroCanvas" class="hero-canvas" aria-label="3D industrial boiler assembly scroll animation"></canvas>
+        
+        <!-- Immediate Fallback Image (prevents layout shift and blank initial state) -->
+        <img id="heroFallback" class="hero-poster-fallback" src="assets/hero-frame-start.jpg" alt="Industrial Steam Boiler Preliminary Assembly View" loading="eager">
+
+        <!-- Cinematic Shading Vignettes -->
+        <div class="hero-vignette-left" aria-hidden="true"></div>
+        <div class="hero-vignette-top" aria-hidden="true"></div>
+        <div class="hero-vignette-bottom" aria-hidden="true"></div>
+
+        <!-- Stable & Readable Hero Typography Overlay -->
+        <div class="hero-overlay">
+          <div class="container hero-grid-layout">
+            
+            <!-- Left Column: Typography, Value Proposition, Action Buttons -->
+            <div class="hero-text-column">
+              <div class="hero-eyebrow">
+                <span class="eyebrow-dot"></span>
+                INDUSTRIAL MACHINERY & EQUIPMENT
+              </div>
+
+              <h1 class="hero-title">
+                Precision Engineering.<br>
+                <span class="title-accent">Powerful Performance.</span>
+              </h1>
+
+              <p class="hero-description">
+                Explore industrial machinery and engineering equipment for demanding industrial applications.
+              </p>
+
+              <div class="hero-cta-group">
+                <a class="btn-hero-primary" href="#catalogue" id="heroExploreBtn">
+                  <span>Explore Our Machines</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a class="btn-hero-secondary" href="#contact" id="heroQuoteBtn">
+                  <span>Request a Quote</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="hero-trust-row">
+                <div class="trust-item">
+                  <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span>Reliable Equipment</span>
+                </div>
+                <div class="trust-item">
+                  <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Industrial-Grade Quality</span>
+                </div>
+                <div class="trust-item">
+                  <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <span>Efficient Performance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Assembly Telemetry Card -->
+            <div class="hero-telemetry-column">
+              <div class="telemetry-card" id="telemetryCard" aria-live="polite">
+                <div class="telemetry-header">
+                  <span class="telemetry-live"><span class="telemetry-beacon"></span> LIVE ASSEMBLY</span>
+                  <span>CAD / 3D SYNC</span>
+                </div>
+                <div class="telemetry-model">ICI STEAM BOILER · 850 KG/HR</div>
+                <div class="telemetry-progress-track">
+                  <div class="telemetry-progress-fill" id="telemetryFill"></div>
+                </div>
+                <div class="telemetry-footer">
+                  <span class="telemetry-percent" id="telemetryPercent">0% ASSEMBLED</span>
+                  <span id="telemetryFrame">FRAME 001 / 240</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Scroll down prompt -->
+        <div class="hero-scroll-prompt" id="scrollPrompt">
+          <div class="scroll-icon-wrap">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span class="scroll-prompt-text">Scroll to Assemble Machinery</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT US SECTION
+         ==================================================================== -->
+    <section class="intro-section section-pad" id="about">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">ABOUT THE COMPANY</p>
+          <h2>Engineering equipment for the <em>work behind industry.</em></h2>
+        </div>
+        <div class="intro-text">
+          <p><strong>M/s. Pukhraj Hastimal & Co.</strong> provides high-performance industrial equipment, thermal systems, power distribution infrastructure, and heavy plant utilities tailored for continuous industrial operations.</p>
+          <p>Our verified machinery directory is founded upon the official equipment schedule of Purchase Order Ref: PH/001/26-27 (released for delivery to Indian Emulsifiers Limited, MIDC Khed, Ratnagiri) alongside verified plant utilities from our operational photographic documentation.</p>
+          <p class="fine-print"><strong>Factual Accuracy Notice:</strong> Original Purchase Order items (Line Items 01–08) are presented strictly according to formal PO documentation. Associated plant utilities (cooling towers, chillers, pumps, compressors, and heat exchangers) are identified directly from verified client facility photographs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PRODUCT CATALOGUE (8 ORIGINAL PO ITEMS + 5 SUPPLEMENTARY MACHINES)
+         ==================================================================== -->
+    <section class="catalogue-section section-pad" id="catalogue">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">VERIFIED MACHINERY CATALOGUE</p>
+            <h2>Explore Our Machines<span class="accent-dot">.</span></h2>
+          </div>
+          <p>Browse our verified fleet of industrial equipment. Select any machine to view full technical specifications, purchase order details, and request a quotation.</p>
+        </div>
+
+        <!-- Filter Controls & Search -->
+        <div class="catalogue-controls">
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Search by machine name, item number, or specifications..." aria-label="Search industrial equipment">
+          </label>
+          <div class="filter-tabs" role="group" aria-label="Filter equipment categories">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All Verified Equipment <span>13</span></button>
+            <button class="filter-btn" data-filter="po" aria-pressed="false">Original PO Items <span>8</span></button>
+            <button class="filter-btn" data-filter="supplementary" aria-pressed="false">Supplementary Utilities <span>5</span></button>
+          </div>
+        </div>
+
+        <p class="results-count" id="resultsCount" aria-live="polite">Showing 13 Verified Industrial Machines (8 PO + 5 Supplementary)</p>
+
+        <!-- Product Cards Grid -->
+        <div class="equipment-grid" id="equipmentGrid">
+
+          <!-- ==========================================
+               THE 8 ORIGINAL PURCHASE ORDER MACHINES
+               ========================================== -->
+
+          <!-- 01: Steam Boiler 850 KG/HR -->
+          <article class="equipment-card" data-id="po1_boiler" data-category-type="po" data-name="BOILER 850 KG/HR CAPACITY WITH OIL & GAS BURNER DUAL steam boiler process heat 84029090" data-category-label="Purchase Order Item 01">
+            <button class="card-image-wrap" data-open="po1_boiler" aria-label="View Boiler 850 KG/HR details">
+              <img src="assets/machines/po-01-boiler.png" alt="Boiler 850 kg/hr capacity with oil & gas burner dual" loading="lazy">
+              <span class="card-number">01</span>
+              <span class="card-badge badge-po">PO ITEM 01</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 01</span><span>HSN: 84029090</span></div>
+              <h3>BOILER 850 KG/HR CAPACITY WITH OIL & GAS BURNER DUAL</h3>
+              <p>Industrial steam boiler with 850 kg/hr capacity and dual fuel (oil & natural gas) automated burner assembly.</p>
+              <div class="card-rate-tag">PO Rate: ₹16,50,000.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po1_boiler" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 02: Hot & Cold Insulation LRB Mattress -->
+          <article class="equipment-card" data-id="po2_insulation" data-category-type="po" data-name="INSULATION HOT INSULATION LRB MATRESS WITH ALUMINIUM CLADDING FOR REACTOR REBOILER COLUMN VESSEL STEAM LINE 87089900" data-category-label="Purchase Order Item 02">
+            <button class="card-image-wrap" data-open="po2_insulation" aria-label="View Thermal Insulation details">
+              <img src="assets/machines/po-02-insulation.png" alt="Hot and cold insulation LRB mattress with aluminium cladding" loading="lazy">
+              <span class="card-number">02</span>
+              <span class="card-badge badge-po">PO ITEM 02</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 02</span><span>HSN: 87089900</span></div>
+              <h3>HOT & COLD INSULATION LRB MATTRESS WITH ALUMINIUM CLADDING</h3>
+              <p>LRB mattress insulation with precision aluminium cladding for reactors, reboilers, vessels, steam and chilled lines.</p>
+              <div class="card-rate-tag">PO Rate: ₹45,38,500.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po2_insulation" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 03: APFC Panels with Harmonic Filters -->
+          <article class="equipment-card" data-id="po3_apfc1" data-category-type="po" data-name="APFC PANELS WITH HARMONIC FILTERS power factor correction capacitor bank 85321000" data-category-label="Purchase Order Item 03">
+            <button class="card-image-wrap" data-open="po3_apfc1" aria-label="View APFC Panel details">
+              <img src="assets/machines/po-03-apfc-panel.png" alt="APFC panel with harmonic filters" loading="lazy">
+              <span class="card-number">03</span>
+              <span class="card-badge badge-po">PO ITEM 03</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 03</span><span>HSN: 85321000</span></div>
+              <h3>APFC PANELS WITH HARMONIC FILTERS</h3>
+              <p>Automatic power factor correction cubicle with heavy-duty capacitor banks and detuned harmonic filter reactors.</p>
+              <div class="card-rate-tag">PO Rate: ₹17,15,000.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po3_apfc1" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 04: Transformer & LT Correction Breaker -->
+          <article class="equipment-card" data-id="po4_ltbreaker" data-category-type="po" data-name="TRANSFORMER & LT ORRECTION BREAKER low tension circuit breaker 995461" data-category-label="Purchase Order Item 04">
+            <button class="card-image-wrap" data-open="po4_ltbreaker" aria-label="View Transformer & LT Breaker details">
+              <img src="assets/machines/po-04-transformer-lt.png" alt="Transformer and LT breaker panel" loading="lazy">
+              <span class="card-number">04</span>
+              <span class="card-badge badge-po">PO ITEM 04</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 04</span><span>HSN: 995461</span></div>
+              <h3>TRANSFORMER & LT ORRECTION BREAKER</h3>
+              <p>Step-down substation transformer and low-tension main power distribution correction breaker cubicle.</p>
+              <div class="card-rate-tag">PO Rate: ₹38,36,250.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po4_ltbreaker" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 05: Transformer & HT Connection Breaker (VCB) -->
+          <article class="equipment-card" data-id="po5_htbreaker" data-category-type="po" data-name="TRANSFORMER & HT CONNECTION BREAKER VCB vacuum circuit breaker 85042100" data-category-label="Purchase Order Item 05">
+            <button class="card-image-wrap" data-open="po5_htbreaker" aria-label="View Transformer & HT Breaker details">
+              <img src="assets/machines/po-05-transformer-ht.png" alt="Transformer and HT Connection Vacuum Circuit Breaker" loading="lazy">
+              <span class="card-number">05</span>
+              <span class="card-badge badge-po">PO ITEM 05</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 05</span><span>HSN: 85042100</span></div>
+              <h3>TRANSFORMER & HT CONNECTION BREAKER</h3>
+              <p>High-tension connection switchgear with Vacuum Circuit Breaker (VCB), CTs, PT, and protection relay section.</p>
+              <div class="card-rate-tag">PO Rate: ₹37,48,000.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po5_htbreaker" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 06: Secondary APFC Panel -->
+          <article class="equipment-card" data-id="po6_apfc2" data-category-type="po" data-name="APFC PANNELS WITH HARMONIC FILTERS line item 06 85321000" data-category-label="Purchase Order Item 06">
+            <button class="card-image-wrap" data-open="po6_apfc2" aria-label="View Secondary APFC Panel details">
+              <img src="assets/machines/po-06-apfc-panel-2.png" alt="Secondary APFC panel with harmonic filters" loading="lazy">
+              <span class="card-number">06</span>
+              <span class="card-badge badge-po">PO ITEM 06</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 06</span><span>HSN: 85321000</span></div>
+              <h3>APFC PANNELS WITH HARMONIC FILTERS</h3>
+              <p>Second dedicated APFC harmonic filter panel line item in PO, providing secondary feeder reactive compensation.</p>
+              <div class="card-rate-tag">PO Rate: ₹17,35,000.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po6_apfc2" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 07: LT Plant Networking & Switchgear -->
+          <article class="equipment-card" data-id="po7_network" data-category-type="po" data-name="LT NETWORKING IN PLANT SUPPLYING OF METERING KIOSK SQICTHER GEARM BREAKERS CABLING 84734090" data-category-label="Purchase Order Item 07">
+            <button class="card-image-wrap" data-open="po7_network" aria-label="View LT Networking details">
+              <img src="assets/machines/po-07-lt-networking.png" alt="LT Networking in plant metering kiosks and switchgear" loading="lazy">
+              <span class="card-number">07</span>
+              <span class="card-badge badge-po">PO ITEM 07</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 07</span><span>HSN: 84734090</span></div>
+              <h3>LT NETWORKING IN PLANT SUPPLYING OF METERING KIOSKS & SWITCHGEAR</h3>
+              <p>Turnkey plant LT networking: outdoor metering kiosks, switchgear breakers, cabling, earthing strips, and fixtures.</p>
+              <div class="card-rate-tag">PO Rate: ₹47,00,000.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po7_network" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 08: Electrification, Trays & Starters -->
+          <article class="equipment-card" data-id="po8_electrification" data-category-type="po" data-name="CHARGES FOR ELECTRIFICATION LIASO PERMISSION GRAWINGS APPROVALS CABLE TRAY STARTERS PUSH BUTTON 995461" data-category-label="Purchase Order Item 08">
+            <button class="card-image-wrap" data-open="po8_electrification" aria-label="View Electrification details">
+              <img src="assets/machines/po-08-electrification.png" alt="Charges for Electrification cable tray starters and push buttons" loading="lazy">
+              <span class="card-number">08</span>
+              <span class="card-badge badge-po">PO ITEM 08</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>PO ITEM 08</span><span>HSN: 995461</span></div>
+              <h3>CHARGES FOR ELECTRIFICATION, CABLE TRAYS, STARTERS & APPROVALS</h3>
+              <p>Turnkey plant equipment electrification, cable tray installation, motor starters, push buttons, and approvals.</p>
+              <div class="card-rate-tag">PO Rate: ₹64,50,000.00 (Qty: 1 NOS)</div>
+              <button class="card-view-btn" data-open="po8_electrification" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ====================================================
+               THE 5 SUPPLEMENTARY PLANT UTILITIES (FROM CLIENT PHOTOS)
+               ==================================================== -->
+
+          <!-- 09: Industrial Cooling Tower -->
+          <article class="equipment-card" data-id="sup1_cooling" data-category-type="supplementary" data-name="INDUSTRIAL COOLING TOWER FRP INDUCED DRAFT plant utilities water cooling" data-category-label="Supplementary Plant Equipment">
+            <button class="card-image-wrap" data-open="sup1_cooling" aria-label="View Cooling Tower details">
+              <img src="assets/machines/sup-01-cooling-tower.png" alt="Industrial Induced-Draft Cooling Tower" loading="lazy">
+              <span class="card-number">09</span>
+              <span class="card-badge badge-sup">SUPPLEMENTARY UTILITY</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>SUPPLEMENTARY</span><span>NOT IN PO REF</span></div>
+              <h3>INDUSTRIAL COOLING TOWER (INDUCED DRAFT)</h3>
+              <p>Multi-cell induced-draft industrial cooling tower with galvanized maintenance staircase, walkways, and piping.</p>
+              <div class="card-rate-tag sup-rate">Status: Contact for Details</div>
+              <button class="card-view-btn" data-open="sup1_cooling" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 10: Water-Cooled Screw Chiller -->
+          <article class="equipment-card" data-id="sup2_chiller" data-category-type="supplementary" data-name="WATER-COOLED SCREW CHILLER ZENVENT ENGINEERING refrigeration plant chilled water" data-category-label="Supplementary Plant Equipment">
+            <button class="card-image-wrap" data-open="sup2_chiller" aria-label="View Screw Chiller details">
+              <img src="assets/machines/sup-02-screw-chiller.png" alt="Water-Cooled Screw Chiller Zenvent Engineering" loading="lazy">
+              <span class="card-number">10</span>
+              <span class="card-badge badge-sup">SUPPLEMENTARY UTILITY</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>SUPPLEMENTARY</span><span>ZENVENT ENGINEERING</span></div>
+              <h3>WATER-COOLED SCREW CHILLER (ZENVENT ENGINEERING)</h3>
+              <p>Industrial refrigeration screw chiller with twin compressor assembly and Zenvent Engineering control cabinet.</p>
+              <div class="card-rate-tag sup-rate">Status: Contact for Details</div>
+              <button class="card-view-btn" data-open="sup2_chiller" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 11: Centrifugal Process Pump -->
+          <article class="equipment-card" data-id="sup3_pump" data-category-type="supplementary" data-name="CENTRIFUGAL PROCESS CHEMICAL SLURRY PUMP chemical fluid transfer pump" data-category-label="Supplementary Plant Equipment">
+            <button class="card-image-wrap" data-open="sup3_pump" aria-label="View Centrifugal Pump details">
+              <img src="assets/machines/sup-03-centrifugal-pump.png" alt="Centrifugal Process & Chemical Slurry Pump" loading="lazy">
+              <span class="card-number">11</span>
+              <span class="card-badge badge-sup">SUPPLEMENTARY UTILITY</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>SUPPLEMENTARY</span><span>NOT IN PO REF</span></div>
+              <h3>CENTRIFUGAL PROCESS & CHEMICAL SLURRY PUMP</h3>
+              <p>Base-mounted industrial centrifugal process pump with flanged radial discharge and heavy-duty TEFC electric drive.</p>
+              <div class="card-rate-tag sup-rate">Status: Contact for Details</div>
+              <button class="card-view-btn" data-open="sup3_pump" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 12: Rotary Screw Air Compressor BK90-8GH -->
+          <article class="equipment-card" data-id="sup4_compressor" data-category-type="supplementary" data-name="ROTARY SCREW AIR COMPRESSOR BK90-8GH compressed air industrial plant" data-category-label="Supplementary Plant Equipment">
+            <button class="card-image-wrap" data-open="sup4_compressor" aria-label="View Screw Compressor BK90-8GH details">
+              <img src="assets/machines/sup-04-screw-compressor.png" alt="Rotary Screw Air Compressor Model BK90-8GH" loading="lazy">
+              <span class="card-number">12</span>
+              <span class="card-badge badge-sup">SUPPLEMENTARY UTILITY</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>SUPPLEMENTARY</span><span>MODEL: BK90-8GH</span></div>
+              <h3>ROTARY SCREW AIR COMPRESSOR BK90-8GH</h3>
+              <p>Cabinet-enclosed rotary screw compressor marked 'BK90-8GH' with integrated digital controller and emergency trip.</p>
+              <div class="card-rate-tag sup-rate">Status: Contact for Details</div>
+              <button class="card-view-btn" data-open="sup4_compressor" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 13: Shell & Tube Heat Exchanger -->
+          <article class="equipment-card" data-id="sup5_exchanger" data-category-type="supplementary" data-name="SHELL & TUBE HEAT EXCHANGER INDUSTRIAL CONDENSER chemical process thermal transfer" data-category-label="Supplementary Plant Equipment">
+            <button class="card-image-wrap" data-open="sup5_exchanger" aria-label="View Heat Exchanger details">
+              <img src="assets/machines/sup-05-heat-exchanger.png" alt="Shell and Tube Heat Exchanger and Industrial Condenser" loading="lazy">
+              <span class="card-number">13</span>
+              <span class="card-badge badge-sup">SUPPLEMENTARY UTILITY</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="card-body">
+              <div class="card-meta"><span>SUPPLEMENTARY</span><span>NOT IN PO REF</span></div>
+              <h3>SHELL & TUBE HEAT EXCHANGER / INDUSTRIAL CONDENSER</h3>
+              <p>Twin stacked industrial shell-and-tube heat exchangers with bolted flanged tube sheets in workshop fabrication bay.</p>
+              <div class="card-rate-tag sup-rate">Status: Contact for Details</div>
+              <button class="card-view-btn" data-open="sup5_exchanger" style="margin-top:14px;">
+                <span>View Full Specifications</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <strong>No matching industrial equipment found.</strong>
+          <span>Try searching for 'boiler', 'transformer', 'insulation', 'chiller', or 'compressor'.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         APPLICATIONS SECTION
+         ==================================================================== -->
+    <section class="applications-section section-pad" id="applications">
+      <div class="container applications-layout">
+        <div class="applications-copy">
+          <p class="eyebrow">INDUSTRIAL INTEGRATION</p>
+          <h2>Engineered systems that work together <em>seamlessly.</em></h2>
+          <p>The equipment fleet coordinates steam generation, high-density insulation, electrical substations, and plant utilities to maintain continuous, high-efficiency industrial processing.</p>
+          <a class="light-link" href="#contact">Discuss Plant Integration <span>↗</span></a>
+        </div>
+        <div class="application-list">
+          <div class="application-row">
+            <span>01</span>
+            <div>
+              <h3>Process Heat & Recovery</h3>
+              <p>Dual-fuel steam boilers (850 kg/hr) · Shell & tube exchangers · LRB rockwool insulation</p>
+            </div>
+            <span class="row-arrow">↗</span>
+          </div>
+          <div class="application-row">
+            <span>02</span>
+            <div>
+              <h3>Substation & Power Factor Correction</h3>
+              <p>Tuned APFC panels · HT Vacuum circuit breakers · Step-down transformers · LT networking</p>
+            </div>
+            <span class="row-arrow">↗</span>
+          </div>
+          <div class="application-row">
+            <span>03</span>
+            <div>
+              <h3>Closed-Loop Utilities & Pneumatics</h3>
+              <p>FRP induced-draft cooling towers · Screw water chillers · Slurry pumps · Rotary compressors (BK90-8GH)</p>
+            </div>
+            <span class="row-arrow">↗</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PURCHASE ORDER REFERENCE SECTION
+         ==================================================================== -->
+    <section class="po-section section-pad" id="po-reference">
+      <div class="container po-layout">
+        <div>
+          <p class="eyebrow">PURCHASE ORDER REFERENCE</p>
+          <h2>Verified details from <em>Ref: PH/001/26-27.</em></h2>
+          <p class="muted">All 8 core equipment entries, descriptions, quantities, and rates correspond strictly to the formal purchase order document.</p>
+        </div>
+        <div class="po-panel">
+          <div class="po-panel-head">
+            <span>PURCHASE ORDER: PH/001/26-27</span>
+            <span>DATE: 15 / MAY / 2026</span>
+          </div>
+          <dl>
+            <div>
+              <dt>Buyer / Issuing Company</dt>
+              <dd><strong>M/s. PUKHRAJ HASTIMAL & CO.</strong><br>GST NO: 27AFMPJ3478A1ZG<br>Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</dd>
+            </div>
+            <div>
+              <dt>Supplier Company</dt>
+              <dd>M/s. SHREE YOGESH ENTERPRISES<br>1st Floor, H No. 295/7, Hotel New India, Kalyan Road, Khoka Compound, Bhiwandi, Dist: Thane 421302</dd>
+            </div>
+            <div>
+              <dt>Consignee & Delivery Address</dt>
+              <dd>INDIAN EMULSIFIERS LIMITED<br>E 10 Lote Parshuram Industrial Zone, MIDC Tal – Khed, Ratnagiri – 415722</dd>
+            </div>
+            <div>
+              <dt>Official Contact Email</dt>
+              <dd><a href="mailto:pukhrajhastimal@gmail.com">pukhrajhastimal@gmail.com</a></dd>
+            </div>
+          </dl>
+          <div class="po-warning">
+            <strong>Financial Summary:</strong> Total basic amount: ₹2,83,72,750.00 | SGST (9%): ₹25,53,547.50 | CGST (9%): ₹25,53,547.50 | <strong>Total Order Value: ₹3,34,79,845.00</strong> (Three Crores Thirty-Four Lakhs Seventy-Nine Thousand Eight Hundred Forty-Five Only).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FAQ SECTION
+         ==================================================================== -->
+    <section class="faq-section section-pad" id="faq">
+      <div class="container faq-layout">
+        <div>
+          <p class="eyebrow">QUESTIONS & ANSWERS</p>
+          <h2>Frequently asked <em>questions.</em></h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>How are the 8 Purchase Order machines verified?</summary>
+            <p>Every single line item in our primary catalogue matches the official description, HSN/SAC code, quantity, and basic rate listed in Purchase Order Ref: PH/001/26-27, paired with its verified photograph from our facility documentation.</p>
+          </details>
+          <details>
+            <summary>What are the supplementary plant utilities?</summary>
+            <p>The cooling tower, water-cooled screw chiller, centrifugal pump, rotary compressor (BK90-8GH), and heat exchanger are authentic machines shown in the client's uploaded photographs. They are clearly identified as supplementary plant utilities not in the PO.</p>
+          </details>
+          <details>
+            <summary>How does the scroll-driven hero assembly animation function?</summary>
+            <p>The hero section uses a 240-frame sequence rendered onto an HTML5 canvas synchronized with GSAP ScrollTrigger. Scrolling down advances through the 3D machinery assembly; scrolling up smoothly reverses the sequence.</p>
+          </details>
+          <details>
+            <summary>How does the quotation request process work?</summary>
+            <p>Submitting the form below formats your required machine parameters, company details, and quantities into an official procurement inquiry addressed to pukhrajhastimal@gmail.com.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT & QUOTE REQUEST SECTION (7 FORM FIELDS)
+         ==================================================================== -->
+    <section class="contact-section section-pad" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">START A CONVERSATION</p>
+          <h2>Request a verified <em>equipment quote.</em></h2>
+          <p>Please provide your organization details and specific equipment requirements. Our engineering team will review your specifications and provide a formal quotation.</p>
+
+          <div class="contact-card-info">
+            <div class="contact-detail">
+              <span class="contact-icon">@</span>
+              <div>
+                <small>DIRECT PROCUREMENT EMAIL</small>
+                <a href="mailto:pukhrajhastimal@gmail.com">pukhrajhastimal@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">📍</span>
+              <div>
+                <small>REGISTERED OFFICE</small>
+                <span>Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">🏢</span>
+              <div>
+                <small>GST REGISTRATION</small>
+                <span>27AFMPJ3478A1ZG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comprehensive Quotation Form (7 Required Fields) -->
+        <form class="contact-form" id="contactForm">
+          <div class="form-heading">
+            <h3>Machinery Quotation Request</h3>
+            <span>* Required fields</span>
+          </div>
+
+          <!-- Customer Name & Company Name -->
+          <div class="form-grid-2">
+            <div class="form-row">
+              <label for="name">Customer Name / Representative *</label>
+              <input id="name" name="name" autocomplete="name" required maxlength="100" placeholder="Full name">
+            </div>
+            <div class="form-row">
+              <label for="company">Company Name / Organization *</label>
+              <input id="company" name="company" autocomplete="organization" required maxlength="120" placeholder="Company / Enterprise name">
+            </div>
+          </div>
+
+          <!-- Email & Phone Number -->
+          <div class="form-grid-2">
+            <div class="form-row">
+              <label for="email">Official Email Address *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="150" placeholder="name@company.com">
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone / Mobile Number *</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+
+          <!-- Machine of Interest & Quantity -->
+          <div class="form-grid-2">
+            <div class="form-row">
+              <label for="equipment">Machine of Interest *</label>
+              <select id="equipment" name="equipment" required>
+                <option value="">Select verified equipment...</option>
+                <optgroup label="--- 8 Original Purchase Order Machines ---">
+                  <option value="po1_boiler">BOILER 850 KG/HR CAPACITY WITH DUAL BURNER (PO Item 01)</option>
+                  <option value="po2_insulation">HOT & COLD INSULATION LRB MATTRESS & CLADDING (PO Item 02)</option>
+                  <option value="po3_apfc1">APFC PANELS WITH HARMONIC FILTERS (PO Item 03)</option>
+                  <option value="po4_ltbreaker">TRANSFORMER & LT ORRECTION BREAKER (PO Item 04)</option>
+                  <option value="po5_htbreaker">TRANSFORMER & HT CONNECTION BREAKER (VCB) (PO Item 05)</option>
+                  <option value="po6_apfc2">APFC PANNELS WITH HARMONIC FILTERS (PO Item 06)</option>
+                  <option value="po7_network">LT NETWORKING IN PLANT & SWITCHGEAR (PO Item 07)</option>
+                  <option value="po8_electrification">ELECTRIFICATION, CABLE TRAYS & STARTERS (PO Item 08)</option>
+                </optgroup>
+                <optgroup label="--- Supplementary Plant Utilities (From Photos) ---">
+                  <option value="sup1_cooling">INDUSTRIAL COOLING TOWER (INDUCED DRAFT)</option>
+                  <option value="sup2_chiller">WATER-COOLED SCREW CHILLER (ZENVENT ENGINEERING)</option>
+                  <option value="sup3_pump">CENTRIFUGAL PROCESS & CHEMICAL SLURRY PUMP</option>
+                  <option value="sup4_compressor">ROTARY SCREW AIR COMPRESSOR BK90-8GH</option>
+                  <option value="sup5_exchanger">SHELL & TUBE HEAT EXCHANGER / CONDENSER</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="quantity">Quantity Required *</label>
+              <input id="quantity" name="quantity" type="number" min="1" max="100" value="1" required>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-row">
+            <label for="message">Capacity, Duty & Delivery Specifications *</label>
+            <textarea id="message" name="message" required minlength="10" maxlength="2000" rows="4" placeholder="Detail your required capacity, operating pressure, process medium, installation site, or delivery schedule..."></textarea>
+          </div>
+
+          <button class="submit-button" type="submit">
+            <span>Prepare Quotation Email Draft</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+          <p class="form-disclaimer"><strong>Client-Side Procurement Dispatcher:</strong> This form validates your parameters and launches your default email client with a pre-formatted RFQ addressed to <code>pukhrajhastimal@gmail.com</code>. For automated server-side email dispatch, an SMTP service (such as Formspree or EmailJS) can be integrated.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark">PH</span>
+        <span class="brand-copy">
+          <strong>PUKHRAJ HASTIMAL & CO.</strong>
+          <small>Precision Engineering · Powerful Performance</small>
+        </span>
+      </a>
+      <p>
+        M/s. Pukhraj Hastimal & Co. Industrial Machinery & Equipment<br>
+        <span>Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004 · GST: 27AFMPJ3478A1ZG</span>
+      </p>
+      <a class="back-top" href="#home">Back to top ↑</a>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> M/s. Pukhraj Hastimal & Co. All rights reserved.</span>
+      <span>240-Frame Interactive Scroll Assembly Engine · Verified Industrial Specifications</span>
+    </div>
+  </footer>
+
+  <!-- EQUIPMENT DETAIL MODAL DIALOG -->
+  <dialog class="equipment-dialog" id="equipmentDialog" aria-labelledby="dialogTitle">
+    <button class="dialog-close" id="dialogClose" aria-label="Close equipment details dialog">✕</button>
+    <div class="dialog-image">
+      <img id="dialogImage" src="assets/machines/po-01-boiler.png" alt="Industrial equipment photograph">
+    </div>
+    <div class="dialog-content">
+      <div id="dialogPoTag" class="dialog-po-tag po-verified">VERIFIED PO LINE ITEM</div>
+      <p class="eyebrow" id="dialogMeta"></p>
+      <h2 id="dialogTitle"></h2>
+      <p id="dialogDescription"></p>
+      
+      <div class="detail-block">
+        <span>Verified Technical Specifications</span>
+        <table class="specs-table">
+          <tbody id="dialogSpecsTable">
+            <!-- Dynamic rows populated from verified database -->
+          </tbody>
+        </table>
+      </div>
+
+      <a class="btn-hero-primary" id="dialogEnquire" href="#contact">
+        <span>Request a Quote for this Machine</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </dialog>
+
+  <!-- GSAP & SCROLLTRIGGER CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- CORE LOGIC & ANIMATION ENGINE -->
+  <script src="script.js"></script>
+</body>
+</html>
