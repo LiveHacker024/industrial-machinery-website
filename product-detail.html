@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0d1a16">
-  <meta name="description" content="Technical specifications, real equipment photographs, engineering parameters, and RFQ quotation request for industrial equipment supplied by M/s. Pukhraj Hastimal & Co.">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="description" content="Technical specifications, real equipment photographs, engineering parameters, and procurement RFQ for industrial equipment supplied by M/s. Pukhraj Hastimal & Co.">
   <title id="pageMetaTitle">Product Specifications | Pukhraj Hastimal & Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="product-dark-page">
   <a class="skip-link" href="#main">Skip to main content</a>
-    <!-- SITE HEADER & NAVIGATION -->
+
+  <!-- SITE HEADER & NAVIGATION -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Pukhraj Hastimal & Co. Homepage">
@@ -28,138 +29,217 @@
       </button>
 
       <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a> <a href="about.html">About Us</a> <a href="products.html" class="active" aria-current="page">Products (33)</a> <a href="categories.html">Categories</a> <a href="industries.html">Industries</a> <a href="downloads.html">Downloads</a> <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html" class="active" aria-current="page">Products (33)</a>
+        <a href="categories.html">Categories</a>
+        <a href="industries.html">Industries</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="contact.html">Contact</a>
         <a href="quote.html" class="nav-cta">Request a Quote <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="subpage-hero">
-      <div class="container">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span class="sep">/</span>
-          <a href="products.html">Products Catalogue</a>
-          <span class="sep">/</span>
-          <span class="current" id="breadcrumbCurrent">Equipment Details</span>
-        </nav>
-        <h1 class="page-title" id="heroProductTitle">Technical <em>Equipment Profile.</em></h1>
-        <p class="hero-subheading" id="heroProductSubheading">
-          Detailed engineering parameters, genuine product photography, verified documentation, and direct procurement enquiry.
-        </p>
+    <!-- TOP BREADCRUMB NAVIGATION -->
+    <nav class="product-breadcrumbs" aria-label="Breadcrumb">
+      <div class="container breadcrumb-inner">
+        <a href="products.html" class="crumb-link">CATALOGUE</a>
+        <span class="crumb-sep" aria-hidden="true">&gt;</span>
+        <a href="categories.html" class="crumb-link" id="crumbCat">CATEGORY</a>
+        <span class="crumb-sep" aria-hidden="true">&gt;</span>
+        <span class="crumb-current" id="crumbProd">PRODUCT NAME</span>
       </div>
-    </section>
+    </nav>
 
-    <section class="section-pad">
+    <!-- MAIN TWO-COLUMN PRODUCT SECTION -->
+    <section class="product-detail-dark-section">
       <div class="container">
-        <div class="product-detail-layout" id="productDetailLayout">
-          
-          <!-- Left Column: Gallery & Authenticity Notice -->
-          <div class="product-detail-gallery">
-            <div class="main-image-frame">
-              <img id="detailImage" src="assets/machines/po-01-boiler.png" alt="Industrial machinery photograph">
+        <div class="product-main-grid">
+
+          <!-- LEFT COLUMN: Product Image Container -->
+          <div class="product-dark-image-card">
+            <div class="product-image-stage">
+              <img id="detailImage" src="assets/machines/po-01-boiler.png" alt="Industrial machinery photograph" loading="eager">
             </div>
 
-            <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 10px;">
+            <div class="product-image-footer">
               <div id="authBadge" class="image-authenticity-badge auth-real">
-                <span>●</span> <span id="authBadgeText">Authentic Photograph</span>
+                <span>●</span> <span id="authBadgeText">Authentic Industrial Photograph</span>
               </div>
-              <div class="gallery-notice" id="authNoticeText">
-                Authentic product photograph verified for this equipment classification.
+              <div class="product-doc-note" id="authNoticeText">
+                Authentic machinery photograph verified against official procurement documentation.
               </div>
-            </div>
-
-            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line);">
-              <h4 style="font-family: var(--font-heading); font-size: 14px; color: var(--forest-dark); margin: 0 0 10px;">DOCUMENTATION STATUS</h4>
-              <div style="font-size: 13px; color: var(--muted); line-height: 1.6;" id="docStatusDesc">
-                Verified against official commercial documentation.
+              <div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                <span style="font-family: var(--font-mono); font-size: 11px; color: #8fa69a; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 4px;">DOCUMENTATION STATUS</span>
+                <p id="docStatusDesc" style="font-size: 12.5px; color: #abbfb4; line-height: 1.5; margin: 0;">
+                  Verified against official commercial documentation.
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Details, Specifications & RFQ -->
-          <div class="product-detail-info">
-            <div class="product-detail-meta">
-              <span id="detailBadge" class="dialog-po-tag po-verified">VERIFIED PO LINE ITEM</span>
-              <span id="detailCat" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--forest-light); background: #f0f4f1; padding: 6px 12px; border-radius: 4px;">THERMAL & HEAT</span>
+          <!-- RIGHT COLUMN: Product Info & CTAs -->
+          <div class="product-info-col">
+            <!-- Category Tag & Badge -->
+            <div class="product-meta-row">
+              <span class="product-category-tag" id="detailCatTag">THERMAL &amp; HEAT TRANSFER</span>
+              <span class="product-po-pill" id="detailStatusPill">VERIFIED PO LINE ITEM</span>
             </div>
 
-            <h2 class="product-detail-title" id="detailTitle">BOILER 850 KG/HR CAPACITY WITH OIL & GAS BURNER DUAL</h2>
-            
-            <p class="product-detail-desc" id="detailDesc">
+            <!-- Product Title -->
+            <h1 class="product-hero-title" id="detailTitle">BOILER 850 KG/HR CAPACITY WITH OIL &amp; GAS BURNER DUAL</h1>
+
+            <!-- Pricing Highlighted in Golden-Yellow -->
+            <div class="product-pricing-block" id="pricingBlock">
+              <span class="pricing-label" id="pricingLabel">COMMERCIAL PRICING / BASIC RATE</span>
+              <div class="pricing-highlight" id="pricingHighlight">
+                ₹16,50,000.00 <span class="pricing-badge" id="pricingBadge">Official PO Rate</span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="product-lead-description" id="detailDesc">
               Industrial high-pressure steam boiler with a rated capacity of 850 kg/hr, equipped with an automated dual-fuel burner firing light oil and natural gas.
             </p>
 
-            <div id="rateContainer" style="padding: 14px 18px; background: #eef7eb; border: 1px solid #c2e2b3; border-radius: 8px;">
-              <span style="font-size: 11.5px; font-family: var(--font-mono); font-weight: 700; color: #21613b; display: block; margin-bottom: 4px;">PURCHASE ORDER PRICING / COMMERCIAL STATUS</span>
-              <strong id="rateValue" style="font-size: 18px; color: #164627; font-family: var(--font-heading);">₹16,50,000.00 (Qty: 1 NOS)</strong>
+            <!-- Action Buttons Trio -->
+            <div class="product-cta-trio">
+              <!-- Primary Yellow Button -->
+              <a href="quote.html" class="btn-product-primary" id="btnSendEnquiry">
+                <span>Send Enquiry</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+
+              <!-- Secondary Button -->
+              <a href="tel:+912223880000" class="btn-product-secondary" id="btnCallSales">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Call Sales Desk</span>
+              </a>
+
+              <!-- Tertiary Spec Sheet Download Button -->
+              <a href="downloads.html" class="btn-product-tertiary" id="btnSpecSheet">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                <span>Spec Sheet</span>
+              </a>
             </div>
 
-            <div class="product-actions-bar">
-              <a class="btn-hero-primary" id="btnQuoteNow" href="quote.html" style="text-decoration: none;">
-                <span>Request a Quote for this Machine</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-              <a class="nav-cta" href="downloads.html" style="text-decoration: none;">
-                <span>Datasheet Requisition ↗</span>
-              </a>
+            <!-- 2x2 Feature Highlights Grid -->
+            <div class="product-perks-grid">
+              <div class="perk-card">
+                <div class="perk-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div class="perk-content">
+                  <span class="perk-title">1-YEAR STANDARD WARRANTY</span>
+                  <span class="perk-desc">OEM backed structural &amp; operational coverage</span>
+                </div>
+              </div>
+
+              <div class="perk-card">
+                <div class="perk-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <div class="perk-content">
+                  <span class="perk-title">PAN-INDIA DELIVERY</span>
+                  <span class="perk-desc">Direct transit to MIDC &amp; all industrial zones</span>
+                </div>
+              </div>
+
+              <div class="perk-card">
+                <div class="perk-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                </div>
+                <div class="perk-content">
+                  <span class="perk-title">FINANCING AVAILABLE</span>
+                  <span class="perk-desc">Flexible equipment procurement &amp; CAPEX terms</span>
+                </div>
+              </div>
+
+              <div class="perk-card">
+                <div class="perk-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <div class="perk-content">
+                  <span class="perk-title">INSTALLATION SUPPORT</span>
+                  <span class="perk-desc">On-site technical commissioning &amp; trial testing</span>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <h3 style="font-family: var(--font-heading); font-size: 18px; color: var(--forest-dark); margin: 0 0 12px;">Key Engineering Features</h3>
-              <ul class="features-list" id="featuresList">
-                <!-- Dynamically generated features -->
+            <!-- Key Engineering Features List -->
+            <div style="margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+              <h3 style="font-family: var(--font-heading); font-size: 15px; color: var(--white); margin: 0 0 12px; letter-spacing: 0.3px;">Engineering Highlights</h3>
+              <ul class="features-list" id="featuresList" style="color: #cbdcd1;">
+                <!-- Populated dynamically -->
               </ul>
             </div>
 
-            <div style="margin-top: 10px;">
-              <h3 style="font-family: var(--font-heading); font-size: 18px; color: var(--forest-dark); margin: 0 0 8px;">Industrial Applications</h3>
-              <p id="applicationsText" style="font-size: 14px; line-height: 1.6; color: #3b5045; margin: 0;">
+            <!-- Industrial Applications -->
+            <div style="margin-top: 18px;">
+              <h3 style="font-family: var(--font-heading); font-size: 15px; color: var(--white); margin: 0 0 6px; letter-spacing: 0.3px;">Recommended Plant Applications</h3>
+              <p id="applicationsText" style="font-size: 13.5px; line-height: 1.65; color: #a2b8ab; margin: 0;">
                 Chemical reboilers, reaction vessels, pharmaceutical heating, food processing, and distillation columns.
               </p>
             </div>
 
-            <div style="margin-top: 14px;">
-              <h3 style="font-family: var(--font-heading); font-size: 18px; color: var(--forest-dark); margin: 0 0 12px;">Full Technical Specifications</h3>
-              <table class="specs-table" style="width: 100%;">
-                <tbody id="specsTableBody">
-                  <!-- Dynamically populated spec rows -->
-                </tbody>
-              </table>
-            </div>
-
           </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- BOTTOM SPECIFICATIONS SECTION ("HEAVY-DUTY SPECIFICATIONS") -->
+    <section class="heavy-duty-specs-section">
+      <div class="container">
+        <div class="specs-section-header">
+          <div class="specs-heading-tag">TECHNICAL ARCHITECTURE</div>
+          <h2 class="specs-section-title">HEAVY-DUTY SPECIFICATIONS</h2>
+          <p class="specs-section-subtitle">
+            Comprehensive verified engineering attributes, operating tolerances, design parameters, and compliance codes.
+          </p>
         </div>
 
-        <!-- Related Industrial Equipment -->
-        <div style="margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line);">
+        <div class="specs-table-dark-wrap">
+          <table class="specs-dark-table">
+            <thead>
+              <tr>
+                <th style="width: 38%;">PARAMETER</th>
+                <th style="width: 62%;">VALUE</th>
+              </tr>
+            </thead>
+            <tbody id="specsDarkTableBody">
+              <!-- Dynamically populated from product.specs -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Associated Industrial Equipment Fleet -->
+        <div style="margin-top: 64px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
           <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
             <div>
-              <p class="eyebrow" style="margin-bottom: 4px;">ASSOCIATED MACHINERY</p>
-              <h3 style="font-family: var(--font-heading); font-size: 24px; color: var(--forest-dark); margin: 0;">Related Plant Equipment.</h3>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--lime); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 4px;">ASSOCIATED MACHINERY</span>
+              <h3 style="font-family: var(--font-heading); font-size: 24px; color: var(--white); margin: 0;">Related Plant Equipment.</h3>
             </div>
-            <a href="products.html" class="cat-link">View Full 33-Machine Fleet <span>→</span></a>
+            <a href="products.html" class="cat-link" style="color: var(--lime);">View Full 33-Machine Fleet <span>→</span></a>
           </div>
 
           <div class="related-products-grid" id="relatedGrid">
             <!-- Dynamically populated related items -->
           </div>
         </div>
-
       </div>
     </section>
   </main>
 
-    <!-- SITE FOOTER -->
-  <footer class="site-footer">
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" style="background: #080a0c; border-top: 1px solid rgba(255,255,255,0.08);">
     <div class="container footer-main">
       <div class="footer-col-brand">
         <a class="brand footer-brand" href="index.html">
           <span class="brand-mark">PH</span>
           <span class="brand-copy">
-            <strong>PUKHRAJ HASTIMAL & CO.</strong>
+            <strong>PUKHRAJ HASTIMAL &amp; CO.</strong>
             <small>Precision Engineering · Powerful Performance</small>
           </span>
         </a>
@@ -184,22 +264,22 @@
       </div>
 
       <div class="footer-col">
-        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">COMPANY & RESOURCES</h4>
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">COMPANY &amp; RESOURCES</h4>
         <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
           <li><a href="about.html" style="color: #c2d4cb; text-decoration: none;">About Our Company</a></li>
-          <li><a href="industries.html" style="color: #c2d4cb; text-decoration: none;">Industries & Applications</a></li>
-          <li><a href="downloads.html" style="color: #c2d4cb; text-decoration: none;">Downloads & Datasheets</a></li>
+          <li><a href="industries.html" style="color: #c2d4cb; text-decoration: none;">Industries &amp; Applications</a></li>
+          <li><a href="downloads.html" style="color: #c2d4cb; text-decoration: none;">Downloads &amp; Datasheets</a></li>
           <li><a href="faq.html" style="color: #c2d4cb; text-decoration: none;">Frequently Asked Questions</a></li>
           <li><a href="contact.html" style="color: #c2d4cb; text-decoration: none;">Contact Procurement</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">LEGAL & COMPLIANCE</h4>
+        <h4 style="font-family: var(--font-heading); color: var(--white); font-size: 14px; margin-bottom: 12px; letter-spacing: 0.5px;">LEGAL &amp; COMPLIANCE</h4>
         <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
           <li><a href="privacy.html" style="color: #c2d4cb; text-decoration: none;">Privacy Policy</a></li>
-          <li><a href="terms.html" style="color: #c2d4cb; text-decoration: none;">Terms & Conditions</a></li>
-          <li><a href="shipping.html" style="color: #c2d4cb; text-decoration: none;">Shipping & Delivery</a></li>
+          <li><a href="terms.html" style="color: #c2d4cb; text-decoration: none;">Terms &amp; Conditions</a></li>
+          <li><a href="shipping.html" style="color: #c2d4cb; text-decoration: none;">Shipping &amp; Delivery</a></li>
           <li><a href="search.html" style="color: #c2d4cb; text-decoration: none;">Catalogue Search</a></li>
           <li><a href="quote.html" style="color: var(--lime); font-weight: 700; text-decoration: none;">Request Quotation ↗</a></li>
         </ul>
@@ -207,7 +287,7 @@
     </div>
 
     <div class="container footer-bottom" style="margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; color: #7f958a;">
-      <span>© 2026 M/s. Pukhraj Hastimal & Co. · Registered Office: Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</span>
+      <span>© 2026 M/s. Pukhraj Hastimal &amp; Co. · Registered Office: Office No 03, 2nd Floor, 7 Kika Bhai Mansion, Gulalwadi, Mumbai - 400004</span>
       <span>Official Contact: <a href="mailto:pukhrajhastimal@gmail.com" style="color: var(--lime);">pukhrajhastimal@gmail.com</a></span>
     </div>
   </footer>
@@ -224,6 +304,7 @@
     }
   </script>
 
+  <!-- Product Database & Dynamic Rendering Script -->
   <script src="assets/products-data.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -233,14 +314,24 @@
 
       if (!product) return;
 
-      document.title = `${product.shortName} | Technical Specifications | Pukhraj Hastimal & Co.`;
-      document.getElementById("breadcrumbCurrent").textContent = product.shortName;
-      document.getElementById("heroProductTitle").innerHTML = `${product.shortName}<em>.</em>`;
-      document.getElementById("heroProductSubheading").textContent = product.description;
+      // Meta & Browser Title
+      document.title = `${product.shortName} | Heavy-Duty Specifications | Pukhraj Hastimal & Co.`;
 
+      // 1. Dynamic Breadcrumbs: CATALOGUE > [CATEGORY NAME] > [PRODUCT NAME]
+      const crumbCat = document.getElementById("crumbCat");
+      const crumbProd = document.getElementById("crumbProd");
+      if (crumbCat) {
+        crumbCat.textContent = (product.categoryLabel || "EQUIPMENT").toUpperCase();
+        crumbCat.href = `products.html?filter=${encodeURIComponent(product.category || 'all')}`;
+      }
+      if (crumbProd) {
+        crumbProd.textContent = (product.shortName || product.name).toUpperCase();
+      }
+
+      // 2. Left Column: Product Image & Badges
       const detailImage = document.getElementById("detailImage");
       detailImage.src = product.image;
-      detailImage.alt = product.alt || product.shortName;
+      detailImage.alt = product.alt || product.shortName || product.name;
 
       const authBadge = document.getElementById("authBadge");
       const authBadgeText = document.getElementById("authBadgeText");
@@ -249,7 +340,7 @@
       if (product.statusType === "extended") {
         if (product.imageCategory === "illustrative") {
           authBadge.className = "image-authenticity-badge auth-illustrative";
-          authBadgeText.textContent = "Illustrative Product Visual (Specification Reference)";
+          authBadgeText.textContent = "Illustrative Product Visual";
           authNoticeText.textContent = product.imageNote || "Illustrative commercial product photography representing standard industrial model specification and appearance; not actual client-owned equipment.";
         } else {
           authBadge.className = "image-authenticity-badge auth-real";
@@ -259,60 +350,11 @@
       } else if (product.statusType === "supplementary") {
         authBadge.className = "image-authenticity-badge auth-real";
         authBadgeText.textContent = "Authentic Client Photograph (Facility Utility)";
-        authNoticeText.textContent = "Authentic machinery photograph documented from the client's operational plant inventory. Offered as associated industrial utility.";
+        authNoticeText.textContent = "Authentic machinery photograph documented from operational plant inventory. Offered as associated industrial utility.";
       } else {
         authBadge.className = "image-authenticity-badge auth-real";
         authBadgeText.textContent = "Authentic Client Photograph (PO Matched)";
         authNoticeText.textContent = `Authentic machine photograph verified directly against Purchase Order Ref: PH/001/26-27 line item #${String(product.poItemNo).padStart(2, '0')}.`;
-      }
-
-      document.getElementById("detailCat").textContent = product.categoryLabel.toUpperCase();
-      const detailBadge = document.getElementById("detailBadge");
-      if (product.statusType === "po") {
-        detailBadge.className = "dialog-po-tag po-verified";
-        detailBadge.textContent = `VERIFIED PO LINE ITEM · ITEM #${String(product.poItemNo).padStart(2, '0')}`;
-      } else if (product.statusType === "supplementary") {
-        detailBadge.className = "dialog-po-tag po-supplementary";
-        detailBadge.textContent = "SUPPLEMENTARY PLANT UTILITY (NOT IN PO)";
-      } else {
-        detailBadge.className = "dialog-po-tag po-extended";
-        detailBadge.textContent = "VERIFIED MARKET SPECIFICATION";
-      }
-
-      document.getElementById("detailTitle").textContent = product.name;
-      document.getElementById("detailDesc").textContent = product.description;
-
-      const rateContainer = document.getElementById("rateContainer");
-      const rateValue = document.getElementById("rateValue");
-      const rateLabel = rateContainer.querySelector("span");
-      
-      if (product.statusType === "po") {
-        rateContainer.style.background = "#eef7eb";
-        rateContainer.style.borderColor = "#c2e2b3";
-        if (rateLabel) {
-          rateLabel.textContent = "PURCHASE ORDER PRICING / OFFICIAL PO RATE";
-          rateLabel.style.color = "#21613b";
-        }
-        rateValue.style.color = "#164627";
-        rateValue.textContent = `PO Rate: ${product.rate} (Qty: ${product.qty})`;
-      } else if (product.statusType === "supplementary") {
-        rateContainer.style.background = "#f4f6f2";
-        rateContainer.style.borderColor = "#d9ded7";
-        if (rateLabel) {
-          rateLabel.textContent = "COMMERCIAL STATUS / FACILITY UTILITY";
-          rateLabel.style.color = "#55665c";
-        }
-        rateValue.style.color = "#2f4036";
-        rateValue.textContent = "Price on Request — Get a Quote";
-      } else {
-        rateContainer.style.background = "#eef6fc";
-        rateContainer.style.borderColor = "#cce2f5";
-        if (rateLabel) {
-          rateLabel.textContent = "CURRENT INDIAN MARKET REFERENCE PRICING";
-          rateLabel.style.color = "#1a5b8c";
-        }
-        rateValue.style.color = "#103c5e";
-        rateValue.textContent = product.rateDisplay || `Market Reference Price: ${product.rate} (Qty: 1 NOS)`;
       }
 
       const docStatusDesc = document.getElementById("docStatusDesc");
@@ -326,51 +368,113 @@
         }
       }
 
-      const btnQuoteNow = document.getElementById("btnQuoteNow");
-      btnQuoteNow.href = `quote.html?product=${encodeURIComponent(product.id)}`;
+      // 3. Right Column: Tags, Titles, Pricing & CTAs
+      const detailCatTag = document.getElementById("detailCatTag");
+      if (detailCatTag) {
+        detailCatTag.textContent = (product.categoryLabel || "INDUSTRIAL MACHINERY").toUpperCase();
+      }
 
+      const detailStatusPill = document.getElementById("detailStatusPill");
+      if (detailStatusPill) {
+        if (product.statusType === "po") {
+          detailStatusPill.className = "product-po-pill po-verified";
+          detailStatusPill.textContent = `VERIFIED PO LINE ITEM #${String(product.poItemNo).padStart(2, '0')}`;
+        } else if (product.statusType === "supplementary") {
+          detailStatusPill.className = "product-po-pill po-supplementary";
+          detailStatusPill.textContent = "PLANT UTILITY (FACILITY STOCK)";
+        } else {
+          detailStatusPill.className = "product-po-pill po-extended";
+          detailStatusPill.textContent = "MARKET MODEL SPECIFICATION";
+        }
+      }
+
+      document.getElementById("detailTitle").textContent = product.name;
+      document.getElementById("detailDesc").textContent = product.description;
+
+      // Pricing Highlight in Golden-Yellow
+      const pricingHighlight = document.getElementById("pricingHighlight");
+      const pricingLabel = document.getElementById("pricingLabel");
+      if (product.statusType === "po") {
+        pricingLabel.textContent = "PURCHASE ORDER PRICING / OFFICIAL PO RATE";
+        pricingHighlight.innerHTML = `${product.rate} <span class="pricing-badge">Official PO Rate · Qty: ${product.qty}</span>`;
+      } else if (product.statusType === "supplementary") {
+        pricingLabel.textContent = "COMMERCIAL PRICING / BASIC RATE";
+        pricingHighlight.innerHTML = `Price on Request <span class="pricing-badge">Custom Engineered / Plant Stock</span>`;
+      } else {
+        pricingLabel.textContent = "ESTIMATED INDIAN MARKET BASIC RATE";
+        const rateFormatted = product.rateDisplay || product.rate || "Price on Request";
+        pricingHighlight.innerHTML = `${rateFormatted} <span class="pricing-badge">Indicative Market Price</span>`;
+      }
+
+      // Action Buttons
+      const btnSendEnquiry = document.getElementById("btnSendEnquiry");
+      if (btnSendEnquiry) {
+        btnSendEnquiry.href = `quote.html?product=${encodeURIComponent(product.id)}`;
+      }
+
+      const btnSpecSheet = document.getElementById("btnSpecSheet");
+      if (btnSpecSheet) {
+        btnSpecSheet.href = `downloads.html?product=${encodeURIComponent(product.id)}`;
+      }
+
+      // Feature Highlights
       const featuresList = document.getElementById("featuresList");
-      featuresList.innerHTML = "";
-      (product.features || []).forEach(f => {
-        const li = document.createElement("li");
-        li.textContent = f;
-        featuresList.appendChild(li);
-      });
+      if (featuresList) {
+        featuresList.innerHTML = "";
+        (product.features || []).forEach(f => {
+          const li = document.createElement("li");
+          li.textContent = f;
+          featuresList.appendChild(li);
+        });
+      }
 
-      document.getElementById("applicationsText").textContent = product.applications || "General industrial process and manufacturing operations.";
+      // Applications Text
+      const applicationsText = document.getElementById("applicationsText");
+      if (applicationsText) {
+        applicationsText.textContent = product.applications || "Industrial manufacturing, chemical process facilities, continuous operations, and heavy infrastructure plants.";
+      }
 
-      const specsTableBody = document.getElementById("specsTableBody");
-      specsTableBody.innerHTML = "";
-      (product.specs || []).forEach(s => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td class="spec-label">${s.label}</td>
-          <td class="spec-value">${s.value}</td>
-        `;
-        specsTableBody.appendChild(tr);
-      });
+      // 4. Bottom Specifications Table ("HEAVY-DUTY SPECIFICATIONS")
+      const specsDarkTableBody = document.getElementById("specsDarkTableBody");
+      if (specsDarkTableBody) {
+        specsDarkTableBody.innerHTML = "";
+        (product.specs || []).forEach(s => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td class="spec-dark-label">${s.label}</td>
+            <td class="spec-dark-value">${s.value}</td>
+          `;
+          specsDarkTableBody.appendChild(tr);
+        });
+      }
 
+      // 5. Related Equipment Fleet
       const relatedGrid = document.getElementById("relatedGrid");
-      relatedGrid.innerHTML = "";
-      const relatedIds = product.related || [];
-      relatedIds.forEach(relId => {
-        const rel = window.PRODUCTS_DATA[relId];
-        if (!rel) return;
-        const card = document.createElement("div");
-        card.className = "equipment-card";
-        card.style.background = "var(--white)";
-        card.innerHTML = `
-          <a class="card-image-wrap" href="product-detail.html?id=${encodeURIComponent(rel.id)}" style="aspect-ratio: 16/10;">
-            <img src="${rel.image}" alt="${rel.shortName}" loading="lazy">
-          </a>
-          <div class="card-body" style="padding: 16px;">
-            <div class="card-meta" style="font-size: 11px;"><span>${rel.categoryLabel.toUpperCase()}</span></div>
-            <h4 style="font-size: 15px; margin: 4px 0 8px; font-family: var(--font-heading);"><a href="product-detail.html?id=${encodeURIComponent(rel.id)}" style="color: inherit; text-decoration: none;">${rel.shortName}</a></h4>
-            <a class="cat-link" href="product-detail.html?id=${encodeURIComponent(rel.id)}" style="font-size: 12.5px;">View Specs →</a>
-          </div>
-        `;
-        relatedGrid.appendChild(card);
-      });
+      if (relatedGrid) {
+        relatedGrid.innerHTML = "";
+        const relatedIds = product.related || [];
+        relatedIds.forEach(relId => {
+          const rel = window.PRODUCTS_DATA[relId];
+          if (!rel) return;
+          const card = document.createElement("div");
+          card.className = "equipment-card";
+          card.style.background = "#111514";
+          card.style.borderColor = "rgba(255, 255, 255, 0.08)";
+          card.innerHTML = `
+            <a class="card-image-wrap" href="product-detail.html?id=${encodeURIComponent(rel.id)}" style="aspect-ratio: 16/10; background: #080a0c;">
+              <img src="${rel.image}" alt="${rel.shortName}" loading="lazy">
+            </a>
+            <div class="card-body" style="padding: 16px;">
+              <div class="card-meta" style="font-size: 11px;"><span style="color: var(--lime);">${rel.categoryLabel.toUpperCase()}</span></div>
+              <h4 style="font-size: 15px; margin: 4px 0 8px; font-family: var(--font-heading);">
+                <a href="product-detail.html?id=${encodeURIComponent(rel.id)}" style="color: #e5ede8; text-decoration: none;">${rel.shortName}</a>
+              </h4>
+              <a class="cat-link" href="product-detail.html?id=${encodeURIComponent(rel.id)}" style="font-size: 12.5px; color: var(--lime);">View Heavy-Duty Specs →</a>
+            </div>
+          `;
+          relatedGrid.appendChild(card);
+        });
+      }
     });
   </script>
 </body>
