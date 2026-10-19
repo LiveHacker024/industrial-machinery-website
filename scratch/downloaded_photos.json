@@ -1,0 +1,182 @@
+{
+  "ext1_vacuum_pump": {
+    "id": "ext1_vacuum_pump",
+    "name": "SIHI Industrial Liquid-Ring Vacuum Pump",
+    "file_path": "assets/machines/additional/ext-01-vacuum-pump.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SIHI_liquid-ring_vacuum_pump_pic01.jpg",
+    "source_label": "Wikimedia Commons (SIHI Liquid Ring Vacuum Pump)",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:RomanM82\" title=\"User:RomanM82\">RomanM82</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext2_gear_pump": {
+    "id": "ext2_gear_pump",
+    "name": "Werd\u00f6hler Pumpenfabrik Industrial Rotary Gear Pump",
+    "file_path": "assets/machines/additional/ext-02-gear-pump.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Zahnradpumpe_Werdohler_Pumpenfabrik_01.JPG",
+    "source_label": "Wikimedia Commons (Werd\u00f6hler Pumpenfabrik)",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:Archiumtechnica\" title=\"User:Archiumtechnica\">Archiumtechnica</a>",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext5_plate_exchanger": {
+    "id": "ext5_plate_exchanger",
+    "name": "Gasketed Stainless Steel Plate Heat Exchanger",
+    "file_path": "assets/machines/additional/ext-05-plate-exchanger.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Plate_heat_exchanger_LS.JPG",
+    "source_label": "Wikimedia Commons (Industrial Plate Heat Exchanger)",
+    "author": "<a href=\"https://en.wikipedia.org/wiki/hr:User:Armchoir\" class=\"extiw\" title=\"w:hr:User:Armchoir\">Armchoir</a> at <a href=\"https://en.wikipedia.org/wiki/hr:\" class=\"extiw\" title=\"w:hr:\">Croatian Wikipedia</a>",
+    "license": "Public domain"
+  },
+  "ext8_storage_tank": {
+    "id": "ext8_storage_tank",
+    "name": "Industrial Stainless Steel 316L Storage Vessels",
+    "file_path": "assets/machines/additional/ext-08-storage-tank.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cuves_Inox_Chalvignac.jpg",
+    "source_label": "Wikimedia Commons (Chalvignac Stainless Vessels)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Virgi17&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Virgi17 (page does not exist)\">Virgi17</a>",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext10_air_receiver": {
+    "id": "ext10_air_receiver",
+    "name": "Heavy-Duty Compressed Air Receiver Pressure Vessel",
+    "file_path": "assets/machines/additional/ext-10-air-receiver.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pressure_Vessel_for_Australia.jpg",
+    "source_label": "Wikimedia Commons (Industrial Pressure Vessel)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Bernoullies&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Bernoullies (page does not exist)\">Bernoullies</a>",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext15_cartridge_filter": {
+    "id": "ext15_cartridge_filter",
+    "name": "Industrial Multi-Cartridge Fluid Filter Housing",
+    "file_path": "assets/machines/additional/ext-15-cartridge-filter.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cartridge_filter.jpg",
+    "source_label": "Wikimedia Commons (Industrial Cartridge Filter)",
+    "author": "The original uploader was <a href=\"https://en.wikipedia.org/wiki/User:Wizmo\" class=\"extiw\" title=\"wikipedia:User:Wizmo\">Wizmo</a> at <a href=\"https://en.wikipedia.org/wiki/\" class=\"extiw\" title=\"wikipedia:\">English Wikipedia</a>.",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext20_mcc_panel": {
+    "id": "ext20_mcc_panel",
+    "name": "Compartmentalized Motor Control Centre & Switchgear Panel",
+    "file_path": "assets/machines/additional/ext-20-mcc-panel.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Electrical_switchgear.JPG",
+    "source_label": "Wikimedia Commons (Electrical Switchgear & MCC)",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:P199\" title=\"User:P199\">P199</a>",
+    "license": "Public domain"
+  },
+  "ext3_dosing_pump": {
+    "id": "ext3_dosing_pump",
+    "name": "Milton Roy Primeroyal Industrial Dosing & Metering Pump",
+    "file_path": "assets/machines/additional/ext-03-dosing-pump.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Milton_Roy%27s_Primeroyal_N_Triplex_Metering_Pump.jpg",
+    "source_label": "Wikimedia Commons (Milton Roy Primeroyal)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:LaurelBloch&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:LaurelBloch (page does not exist)\">LaurelBloch</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext4_circulation_pump": {
+    "id": "ext4_circulation_pump",
+    "name": "Industrial Inline Centrifugal Circulation Pump",
+    "file_path": "assets/machines/additional/ext-04-circulation-pump.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Centrifugal_Pump.jpg",
+    "source_label": "Wikimedia Commons (Hydronic Centrifugal Circulation)",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:SAF1999\" title=\"User:SAF1999\">Saud</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext6_refrig_condenser": {
+    "id": "ext6_refrig_condenser",
+    "name": "Industrial Finned-Tube Refrigeration Condenser Bank",
+    "file_path": "assets/machines/additional/ext-06-refrig-condenser.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Industrial_Refrigeration_Condensers.jpg",
+    "source_label": "Wikimedia Commons (Industrial Refrigeration Condensers)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Endora6398&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Endora6398 (page does not exist)\">Endora6398</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext7_evaporator": {
+    "id": "ext7_evaporator",
+    "name": "Industrial Single Effect Climbing & Falling Film Evaporator",
+    "file_path": "assets/machines/additional/ext-07-evaporator.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_single_effect_climbing_falling_film_evaporator.jpg",
+    "source_label": "Wikimedia Commons (Falling Film Evaporator)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Jessica.rowand&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Jessica.rowand (page does not exist)\">Jessica.rowand</a>",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext9_mixing_tank": {
+    "id": "ext9_mixing_tank",
+    "name": "Industrial Motorized Agitated Reaction Mixing Vessel",
+    "file_path": "assets/machines/additional/ext-09-mixing-tank.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pueblo_Chemical_Agent_-_Agitated_reactor_(motor).jpg",
+    "source_label": "Wikimedia Commons (US Army Agitated Reactor)",
+    "author": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/acwa/\">PEO, Assembled Chemical Weapons Alternatives</a>",
+    "license": "CC BY 2.0"
+  },
+  "ext11_centrifugal_blower": {
+    "id": "ext11_centrifugal_blower",
+    "name": "High-Pressure Industrial Centrifugal Blower Fan",
+    "file_path": "assets/machines/additional/ext-11-centrifugal-blower.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:High_Pressure_Centrifugal_Fan.jpg",
+    "source_label": "Wikimedia Commons (High Pressure Centrifugal Fan)",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:SAF1999\" title=\"User:SAF1999\">SAF</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext12_air_dryer": {
+    "id": "ext12_air_dryer",
+    "name": "Industrial Refrigerated Compressed Air Dryer System",
+    "file_path": "assets/machines/additional/ext-12-air-dryer.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dryer-CFC_Dryer.jpg",
+    "source_label": "Wikimedia Commons (Refrigerated Air Dryer Unit)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:BSE9619&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:BSE9619 (page does not exist)\">Brian S. Elliott</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext13_filtration_system": {
+    "id": "ext13_filtration_system",
+    "name": "Multi-Grade Sand & Media Water Filtration Tank Skid",
+    "file_path": "assets/machines/additional/ext-13-filtration-system.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Industrial_Water_Treatment_Plants.jpg",
+    "source_label": "Wikimedia Commons (Industrial Water Treatment Plants)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Snj16&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Snj16 (page does not exist)\">Apex Ecotech Private Limited</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext14_bag_filter": {
+    "id": "ext14_bag_filter",
+    "name": "Industrial Fabric Bag Filter Multi-Chamber Housing",
+    "file_path": "assets/machines/additional/ext-14-bag-filter.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schlauchfilter_im_Deutschen_Museum.jpg",
+    "source_label": "Wikimedia Commons (Deutsches Museum Bag Filter)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Intensiv-Filter&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Intensiv-Filter (page does not exist)\">Intensiv-Filter</a>",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext16_ro_system": {
+    "id": "ext16_ro_system",
+    "name": "Industrial Skid-Mounted Reverse Osmosis (RO) Plant",
+    "file_path": "assets/machines/additional/ext-16-ro-system.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Reverse_Osmosis_System.jpg",
+    "source_label": "Wikimedia Commons (Reverse Osmosis Skid Unit)",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:Mas_mufti\" title=\"User:Mas mufti\">Mas mufti</a>",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext17_water_softener": {
+    "id": "ext17_water_softener",
+    "name": "Automated Cation-Exchange Water Softener Plant",
+    "file_path": "assets/machines/additional/ext-17-water-softener.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Water_softener.jpg",
+    "source_label": "Wikimedia Commons (Water Softener Unit)",
+    "author": "<a href=\"//commons.wikimedia.org/wiki/User:%E0%B0%B0%E0%B0%B5%E0%B0%BF%E0%B0%9A%E0%B0%82%E0%B0%A6%E0%B1%8D%E0%B0%B0\" title=\"User:\u0c30\u0c35\u0c3f\u0c1a\u0c02\u0c26\u0c4d\u0c30\">\u0c30\u0c35\u0c3f\u0c1a\u0c02\u0c26\u0c4d\u0c30</a>",
+    "license": "CC BY-SA 4.0"
+  },
+  "ext18_diesel_generator": {
+    "id": "ext18_diesel_generator",
+    "name": "Industrial Acoustic Canopy Diesel Generator Set",
+    "file_path": "assets/machines/additional/ext-18-diesel-generator.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Caterpillar_(Olympian)_Generator_Set.jpg",
+    "source_label": "Wikimedia Commons (Caterpillar Olympian DG Set)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Gregsedits&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Gregsedits (page does not exist)\">Gregsedits</a>",
+    "license": "CC BY-SA 3.0"
+  },
+  "ext19_electric_motor": {
+    "id": "ext19_electric_motor",
+    "name": "Heavy-Duty Cast Iron TEFC Three-Phase Induction Motor",
+    "file_path": "assets/machines/additional/ext-19-electric-motor.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Three_Phase_Induction_Motor.jpg",
+    "source_label": "Wikimedia Commons (Three Phase Induction Motor)",
+    "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:KishanMalaviyaatCHETAK_ELECTRICALS&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:KishanMalaviyaatCHETAK ELECTRICALS (page does not exist)\">KishanMalaviyaatCHETAK ELECTRICALS</a>",
+    "license": "CC BY-SA 4.0"
+  }
+}

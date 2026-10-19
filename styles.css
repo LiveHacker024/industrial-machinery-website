@@ -1880,6 +1880,13 @@ button {
   border-color: #d7dcd5;
 }
 
+.card-rate-tag.ext-rate {
+  background: #f0f6fc;
+  color: #1a5b8c;
+  border-color: #cde1f5;
+  font-size: 11px;
+}
+
 .form-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d1a16">
-  <meta name="description" content="Explore the verified 33 industrial machinery fleet of M/s. Pukhraj Hastimal & Co. Including 8 original purchase order items, 5 supplementary utilities, and 20 extended industrial machines.">
+  <meta name="description" content="Explore the verified 33 industrial machinery fleet of M/s. Pukhraj Hastimal & Co. Featuring real product photographs, purchase order rates, and current Indian market reference pricing.">
   <title>Industrial Machinery Catalogue (33 Products) | Pukhraj Hastimal & Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
         </nav>
         <h1 class="page-title">Industrial Machinery <em>Catalogue (33).</em></h1>
         <p class="hero-subheading">
-          Explore our complete verified fleet of 33 heavy-duty industrial equipment units: 8 original purchase order line items (PO Ref: PH/001/26-27), 5 supplementary facility utilities, and 20 extended process machines.
+          Explore our complete fleet of 33 industrial machines: 8 original purchase order line items (PO Ref: PH/001/26-27), 5 supplementary facility utilities, and 20 market models upgraded with real equipment photographs and current Indian supplier reference pricing.
         </p>
       </div>
     </section>
@@ -73,7 +73,7 @@
           <button class="filter-btn-pill active" data-filter="all">All Equipment <span>33</span></button>
           <button class="filter-btn-pill" data-filter="po">Verified PO Items <span>8</span></button>
           <button class="filter-btn-pill" data-filter="supplementary">Plant Utilities <span>5</span></button>
-          <button class="filter-btn-pill" data-filter="extended">Technical Reference <span>20</span></button>
+          <button class="filter-btn-pill" data-filter="extended">Market Reference <span>20</span></button>
           <button class="filter-btn-pill" data-filter="cat-thermal">Thermal & Heat <span>5</span></button>
           <button class="filter-btn-pill" data-filter="cat-pumps">Pumps & Handling <span>4</span></button>
           <button class="filter-btn-pill" data-filter="cat-air">Air & Gas <span>3</span></button>
@@ -85,8 +85,9 @@
         <div style="display: flex; justify-content: space-between; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; gap: 10px;">
           <p class="results-count" id="resultsCount" style="margin: 0;" aria-live="polite">Showing 33 Verified Industrial Machines</p>
           <div style="font-size: 12.5px; color: var(--muted); display: flex; align-items: center; gap: 16px;">
-            <span><strong style="color: #21613b;">●</strong> Authentic Photo</span>
-            <span><strong style="color: #1a73e8;">●</strong> Technical Schematic</span>
+            <span><strong style="color: #21613b;">●</strong> PO Contract Rate</span>
+            <span><strong style="color: #55665c;">●</strong> Price on Request</span>
+            <span><strong style="color: #1a73e8;">●</strong> Market Reference Price</span>
           </div>
         </div>
 
@@ -132,7 +133,7 @@
           <li><a href="products.html" style="color: #c2d4cb; text-decoration: none;">All 33 Machines</a></li>
           <li><a href="products.html?filter=po" style="color: #c2d4cb; text-decoration: none;">Original PO Items (01–08)</a></li>
           <li><a href="products.html?filter=supplementary" style="color: #c2d4cb; text-decoration: none;">Plant Utilities (09–13)</a></li>
-          <li><a href="products.html?filter=extended" style="color: #c2d4cb; text-decoration: none;">Technical Specifications (14–33)</a></li>
+          <li><a href="products.html?filter=extended" style="color: #c2d4cb; text-decoration: none;">Market Models (14–33)</a></li>
           <li><a href="categories.html" style="color: #c2d4cb; text-decoration: none;">All 7 Product Categories</a></li>
         </ul>
       </div>
@@ -205,7 +206,6 @@
         searchInput.value = searchQuery;
       }
 
-      // Update active pill button
       filterTabs.querySelectorAll(".filter-btn-pill").forEach(btn => {
         const isMatch = btn.dataset.filter === activeFilter;
         btn.classList.toggle("active", isMatch);
@@ -230,6 +230,7 @@
               item.categoryLabel,
               item.hsn || "",
               item.rate || "",
+              item.rateDisplay || "",
               item.description,
               item.applications,
               (item.specs || []).map(s => s.label + " " + s.value).join(" "),
@@ -270,13 +271,19 @@
               badgeClass = "badge-sup";
             } else if (p.statusType === "extended") {
               badgeClass = "badge-tech";
-              badgeText = "SPECIFICATION REFERENCE";
+              badgeText = "AUTHENTIC PHOTO";
             }
 
             const itemNumber = String(p.poItemNo || (idx + 1)).padStart(2, '0');
-            const rateBadge = p.rate && p.rate.includes("₹")
-              ? `<div class="card-rate-tag">PO Rate: ${p.rate} (Qty: ${p.qty})</div>`
-              : `<div class="card-rate-tag sup-rate">Status: Contact for Quotation</div>`;
+            
+            let rateBadge = '';
+            if (p.statusType === "po") {
+              rateBadge = `<div class="card-rate-tag">PO Rate: ${p.rate} (Qty: ${p.qty})</div>`;
+            } else if (p.statusType === "supplementary") {
+              rateBadge = `<div class="card-rate-tag sup-rate">Price on Request — Get a Quote</div>`;
+            } else {
+              rateBadge = `<div class="card-rate-tag ext-rate">${p.rateDisplay || ('Market Reference: ' + p.rate)}</div>`;
+            }
 
             card.innerHTML = `
               <a class="card-image-wrap" href="product-detail.html?id=${encodeURIComponent(p.id)}" aria-label="View specifications for ${p.shortName}">

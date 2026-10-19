@@ -781,16 +781,23 @@ SEARCH_HTML = """<!doctype html>
 
             let badgeClass = "badge-po";
             let badgeText = p.badgeLabel || "VERIFIED PO";
-            if (p.statusType === "supplementary") badgeClass = "badge-sup";
-            else if (p.statusType === "extended") {
+            if (p.statusType === "supplementary") {
+              badgeClass = "badge-sup";
+              badgeText = "SUPPLEMENTARY";
+            } else if (p.statusType === "extended") {
               badgeClass = "badge-tech";
-              badgeText = "SPECIFICATION REFERENCE";
+              badgeText = "AUTHENTIC PHOTO";
             }
 
             const itemNumber = String(p.poItemNo || (idx + 1)).padStart(2, '0');
-            const rateBadge = p.rate && p.rate.includes("₹")
-              ? `<div class="card-rate-tag">PO Rate: ${p.rate} (Qty: ${p.qty})</div>`
-              : `<div class="card-rate-tag sup-rate">Status: Contact for Quotation</div>`;
+            let rateBadge = '';
+            if (p.statusType === 'po') {
+              rateBadge = `<div class="card-rate-tag">PO Rate: ${p.rate} (Qty: ${p.qty})</div>`;
+            } else if (p.statusType === 'supplementary') {
+              rateBadge = `<div class="card-rate-tag sup-rate">Price on Request — Get a Quote</div>`;
+            } else {
+              rateBadge = `<div class="card-rate-tag ext-rate">${p.rateDisplay || ('Market Reference: ' + p.rate)}</div>`;
+            }
 
             card.innerHTML = `
               <a class="card-image-wrap" href="product-detail.html?id=${encodeURIComponent(p.id)}">

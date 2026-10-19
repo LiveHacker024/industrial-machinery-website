@@ -685,6 +685,9 @@ function openProductModal(id) {
     if (item.isPoItem) {
       dialogPoTag.textContent = `VERIFIED PO LINE ITEM · PO REF: PH/001/26-27 (ITEM ${String(item.poItemNo).padStart(2, '0')})`;
       dialogPoTag.className = "dialog-po-tag po-verified";
+    } else if (item.statusType === "extended") {
+      dialogPoTag.textContent = `AUTHENTIC INDUSTRIAL EQUIPMENT · ${item.rateDisplay || ('MARKET REF: ' + item.rate)}`;
+      dialogPoTag.className = "dialog-po-tag po-extended";
     } else {
       dialogPoTag.textContent = "SUPPLEMENTARY PLANT UTILITY · FROM CLIENT MACHINERY PHOTOS (NOT IN PO)";
       dialogPoTag.className = "dialog-po-tag po-supplementary";

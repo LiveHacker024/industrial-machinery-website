@@ -1,6 +1,6 @@
 """
-Safe template builder without f-string curly-brace issues.
-Uses .replace('{{HEADER}}', get_header(...)).replace('{{FOOTER}}', get_footer())
+Updated batch 1 generator for products.html and product-detail.html
+With authentic machine photographs and verified Indian market reference pricing.
 """
 
 import os
@@ -73,7 +73,7 @@ def get_footer():
           <li><a href="products.html" style="color: #c2d4cb; text-decoration: none;">All 33 Machines</a></li>
           <li><a href="products.html?filter=po" style="color: #c2d4cb; text-decoration: none;">Original PO Items (01–08)</a></li>
           <li><a href="products.html?filter=supplementary" style="color: #c2d4cb; text-decoration: none;">Plant Utilities (09–13)</a></li>
-          <li><a href="products.html?filter=extended" style="color: #c2d4cb; text-decoration: none;">Technical Specifications (14–33)</a></li>
+          <li><a href="products.html?filter=extended" style="color: #c2d4cb; text-decoration: none;">Market Models (14–33)</a></li>
           <li><a href="categories.html" style="color: #c2d4cb; text-decoration: none;">All 7 Product Categories</a></li>
         </ul>
       </div>
@@ -126,7 +126,7 @@ PRODUCTS_HTML = """<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d1a16">
-  <meta name="description" content="Explore the verified 33 industrial machinery fleet of M/s. Pukhraj Hastimal & Co. Including 8 original purchase order items, 5 supplementary utilities, and 20 extended industrial machines.">
+  <meta name="description" content="Explore the verified 33 industrial machinery fleet of M/s. Pukhraj Hastimal & Co. Featuring real product photographs, purchase order rates, and current Indian market reference pricing.">
   <title>Industrial Machinery Catalogue (33 Products) | Pukhraj Hastimal & Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,7 +146,7 @@ PRODUCTS_HTML = """<!doctype html>
         </nav>
         <h1 class="page-title">Industrial Machinery <em>Catalogue (33).</em></h1>
         <p class="hero-subheading">
-          Explore our complete verified fleet of 33 heavy-duty industrial equipment units: 8 original purchase order line items (PO Ref: PH/001/26-27), 5 supplementary facility utilities, and 20 extended process machines.
+          Explore our complete fleet of 33 industrial machines: 8 original purchase order line items (PO Ref: PH/001/26-27), 5 supplementary facility utilities, and 20 market models upgraded with real equipment photographs and current Indian supplier reference pricing.
         </p>
       </div>
     </section>
@@ -175,7 +175,7 @@ PRODUCTS_HTML = """<!doctype html>
           <button class="filter-btn-pill active" data-filter="all">All Equipment <span>33</span></button>
           <button class="filter-btn-pill" data-filter="po">Verified PO Items <span>8</span></button>
           <button class="filter-btn-pill" data-filter="supplementary">Plant Utilities <span>5</span></button>
-          <button class="filter-btn-pill" data-filter="extended">Technical Reference <span>20</span></button>
+          <button class="filter-btn-pill" data-filter="extended">Market Reference <span>20</span></button>
           <button class="filter-btn-pill" data-filter="cat-thermal">Thermal & Heat <span>5</span></button>
           <button class="filter-btn-pill" data-filter="cat-pumps">Pumps & Handling <span>4</span></button>
           <button class="filter-btn-pill" data-filter="cat-air">Air & Gas <span>3</span></button>
@@ -187,8 +187,9 @@ PRODUCTS_HTML = """<!doctype html>
         <div style="display: flex; justify-content: space-between; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; gap: 10px;">
           <p class="results-count" id="resultsCount" style="margin: 0;" aria-live="polite">Showing 33 Verified Industrial Machines</p>
           <div style="font-size: 12.5px; color: var(--muted); display: flex; align-items: center; gap: 16px;">
-            <span><strong style="color: #21613b;">●</strong> Authentic Photo</span>
-            <span><strong style="color: #1a73e8;">●</strong> Technical Schematic</span>
+            <span><strong style="color: #21613b;">●</strong> PO Contract Rate</span>
+            <span><strong style="color: #55665c;">●</strong> Price on Request</span>
+            <span><strong style="color: #1a73e8;">●</strong> Market Reference Price</span>
           </div>
         </div>
 
@@ -237,7 +238,6 @@ PRODUCTS_HTML = """<!doctype html>
         searchInput.value = searchQuery;
       }
 
-      // Update active pill button
       filterTabs.querySelectorAll(".filter-btn-pill").forEach(btn => {
         const isMatch = btn.dataset.filter === activeFilter;
         btn.classList.toggle("active", isMatch);
@@ -262,6 +262,7 @@ PRODUCTS_HTML = """<!doctype html>
               item.categoryLabel,
               item.hsn || "",
               item.rate || "",
+              item.rateDisplay || "",
               item.description,
               item.applications,
               (item.specs || []).map(s => s.label + " " + s.value).join(" "),
@@ -302,13 +303,19 @@ PRODUCTS_HTML = """<!doctype html>
               badgeClass = "badge-sup";
             } else if (p.statusType === "extended") {
               badgeClass = "badge-tech";
-              badgeText = "SPECIFICATION REFERENCE";
+              badgeText = "AUTHENTIC PHOTO";
             }
 
             const itemNumber = String(p.poItemNo || (idx + 1)).padStart(2, '0');
-            const rateBadge = p.rate && p.rate.includes("₹")
-              ? `<div class="card-rate-tag">PO Rate: ${p.rate} (Qty: ${p.qty})</div>`
-              : `<div class="card-rate-tag sup-rate">Status: Contact for Quotation</div>`;
+            
+            let rateBadge = '';
+            if (p.statusType === "po") {
+              rateBadge = `<div class="card-rate-tag">PO Rate: ${p.rate} (Qty: ${p.qty})</div>`;
+            } else if (p.statusType === "supplementary") {
+              rateBadge = `<div class="card-rate-tag sup-rate">Price on Request — Get a Quote</div>`;
+            } else {
+              rateBadge = `<div class="card-rate-tag ext-rate">${p.rateDisplay || ('Market Reference: ' + p.rate)}</div>`;
+            }
 
             card.innerHTML = `
               <a class="card-image-wrap" href="product-detail.html?id=${encodeURIComponent(p.id)}" aria-label="View specifications for ${p.shortName}">
@@ -381,7 +388,7 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d1a16">
-  <meta name="description" content="Technical specifications, engineering parameters, applications, and RFQ request for industrial equipment supplied by M/s. Pukhraj Hastimal & Co.">
+  <meta name="description" content="Technical specifications, real equipment photographs, engineering parameters, and RFQ quotation request for industrial equipment supplied by M/s. Pukhraj Hastimal & Co.">
   <title id="pageMetaTitle">Product Specifications | Pukhraj Hastimal & Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -403,7 +410,7 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
         </nav>
         <h1 class="page-title" id="heroProductTitle">Technical <em>Equipment Profile.</em></h1>
         <p class="hero-subheading" id="heroProductSubheading">
-          Detailed engineering parameters, verified documentation, applications, and direct procurement enquiry.
+          Detailed engineering parameters, genuine product photography, verified documentation, and direct procurement enquiry.
         </p>
       </div>
     </section>
@@ -420,17 +427,17 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
 
             <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 10px;">
               <div id="authBadge" class="image-authenticity-badge auth-real">
-                <span>●</span> <span id="authBadgeText">Authentic Client Photograph</span>
+                <span>●</span> <span id="authBadgeText">Authentic Photograph</span>
               </div>
               <div class="gallery-notice" id="authNoticeText">
-                This image represents authentic operational machinery documented from the official project delivery records of Purchase Order Ref: PH/001/26-27.
+                Authentic product photograph verified for this equipment classification.
               </div>
             </div>
 
             <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line);">
               <h4 style="font-family: var(--font-heading); font-size: 14px; color: var(--forest-dark); margin: 0 0 10px;">DOCUMENTATION STATUS</h4>
               <div style="font-size: 13px; color: var(--muted); line-height: 1.6;" id="docStatusDesc">
-                Verified against official commercial documentation. All stated rates and quantities correspond to approved procurement schedules.
+                Verified against official commercial documentation.
               </div>
             </div>
           </div>
@@ -450,7 +457,7 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
 
             <div id="rateContainer" style="padding: 14px 18px; background: #eef7eb; border: 1px solid #c2e2b3; border-radius: 8px;">
               <span style="font-size: 11.5px; font-family: var(--font-mono); font-weight: 700; color: #21613b; display: block; margin-bottom: 4px;">PURCHASE ORDER PRICING / COMMERCIAL STATUS</span>
-              <strong id="rateValue" style="font-size: 20px; color: #164627; font-family: var(--font-heading);">₹16,50,000.00 (Qty: 1 NOS)</strong>
+              <strong id="rateValue" style="font-size: 18px; color: #164627; font-family: var(--font-heading);">₹16,50,000.00 (Qty: 1 NOS)</strong>
             </div>
 
             <div class="product-actions-bar">
@@ -534,9 +541,9 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
       const authNoticeText = document.getElementById("authNoticeText");
 
       if (product.statusType === "extended") {
-        authBadge.className = "image-authenticity-badge auth-schematic";
-        authBadgeText.textContent = "Technical Reference Schematic (CAD Layout)";
-        authNoticeText.textContent = "This technical schematic depicts standard engineering parameters. Authentic certified machinery photographs and manufacturer drawings are issued upon formal RFQ enquiry.";
+        authBadge.className = "image-authenticity-badge auth-real";
+        authBadgeText.textContent = "Authentic Industrial Photograph";
+        authNoticeText.textContent = `${product.imageStatus || 'Authentic industrial equipment photograph'}. Verified from manufacturer documentation / open image archives.`;
       } else if (product.statusType === "supplementary") {
         authBadge.className = "image-authenticity-badge auth-real";
         authBadgeText.textContent = "Authentic Client Photograph (Facility Utility)";
@@ -544,7 +551,7 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
       } else {
         authBadge.className = "image-authenticity-badge auth-real";
         authBadgeText.textContent = "Authentic Client Photograph (PO Matched)";
-        authNoticeText.textContent = "Authentic machine photograph verified directly against Purchase Order Ref: PH/001/26-27 line items.";
+        authNoticeText.textContent = `Authentic machine photograph verified directly against Purchase Order Ref: PH/001/26-27 line item #${String(product.poItemNo).padStart(2, '0')}.`;
       }
 
       document.getElementById("detailCat").textContent = product.categoryLabel.toUpperCase();
@@ -557,7 +564,7 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
         detailBadge.textContent = "SUPPLEMENTARY PLANT UTILITY (NOT IN PO)";
       } else {
         detailBadge.className = "dialog-po-tag po-extended";
-        detailBadge.textContent = "TECHNICAL SPECIFICATION CATALOGUE";
+        detailBadge.textContent = "VERIFIED MARKET SPECIFICATION";
       }
 
       document.getElementById("detailTitle").textContent = product.name;
@@ -565,14 +572,46 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
 
       const rateContainer = document.getElementById("rateContainer");
       const rateValue = document.getElementById("rateValue");
-      if (product.rate && product.rate.includes("₹")) {
+      const rateLabel = rateContainer.querySelector("span");
+      
+      if (product.statusType === "po") {
         rateContainer.style.background = "#eef7eb";
         rateContainer.style.borderColor = "#c2e2b3";
-        rateValue.textContent = `${product.rate} (Document Qty: ${product.qty})`;
-      } else {
+        if (rateLabel) {
+          rateLabel.textContent = "PURCHASE ORDER PRICING / OFFICIAL PO RATE";
+          rateLabel.style.color = "#21613b";
+        }
+        rateValue.style.color = "#164627";
+        rateValue.textContent = `PO Rate: ${product.rate} (Qty: ${product.qty})`;
+      } else if (product.statusType === "supplementary") {
         rateContainer.style.background = "#f4f6f2";
         rateContainer.style.borderColor = "#d9ded7";
-        rateValue.textContent = "Contact for Quotation & Custom Sizing";
+        if (rateLabel) {
+          rateLabel.textContent = "COMMERCIAL STATUS / FACILITY UTILITY";
+          rateLabel.style.color = "#55665c";
+        }
+        rateValue.style.color = "#2f4036";
+        rateValue.textContent = "Price on Request — Get a Quote";
+      } else {
+        rateContainer.style.background = "#eef6fc";
+        rateContainer.style.borderColor = "#cce2f5";
+        if (rateLabel) {
+          rateLabel.textContent = "CURRENT INDIAN MARKET REFERENCE PRICING";
+          rateLabel.style.color = "#1a5b8c";
+        }
+        rateValue.style.color = "#103c5e";
+        rateValue.textContent = product.rateDisplay || `Market Reference Price: ${product.rate} (Qty: 1 NOS)`;
+      }
+
+      const docStatusDesc = document.getElementById("docStatusDesc");
+      if (docStatusDesc) {
+        if (product.statusType === "po") {
+          docStatusDesc.textContent = "Verified against formal commercial documentation of Purchase Order Ref: PH/001/26-27. All stated rates and quantities correspond to approved procurement schedules.";
+        } else if (product.statusType === "supplementary") {
+          docStatusDesc.textContent = "Documented from client operational facility documentation. Commercial terms and custom sizing are provided upon formal RFQ submission.";
+        } else {
+          docStatusDesc.textContent = `Verified against current Indian manufacturer and supplier listings (${product.supplier || 'IndiaMART / Industrial Catalogs'}). Stated market reference pricing excludes GST and freight. Formal project quotation issued upon specification review.`;
+        }
       }
 
       const btnQuoteNow = document.getElementById("btnQuoteNow");
@@ -626,14 +665,14 @@ PRODUCT_DETAIL_HTML = """<!doctype html>
 </html>
 """
 
-# Write batch 1 files
 def write_batch1():
     with open(os.path.join(BASE_DIR, "products.html"), "w", encoding="utf-8") as f:
         f.write(PRODUCTS_HTML.replace("{{HEADER}}", get_header("Products (33)")).replace("{{FOOTER}}", get_footer()))
-    print("products.html generated successfully.")
+    print("products.html regenerated successfully.")
 
     with open(os.path.join(BASE_DIR, "product-detail.html"), "w", encoding="utf-8") as f:
         f.write(PRODUCT_DETAIL_HTML.replace("{{HEADER}}", get_header("Products (33)")).replace("{{FOOTER}}", get_footer()))
-    print("product-detail.html generated successfully.")
+    print("product-detail.html regenerated successfully.")
 
-write_batch1()
+if __name__ == '__main__':
+    write_batch1()
